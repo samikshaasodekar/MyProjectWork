@@ -1,0 +1,56 @@
+Project Structure
+src/
+└── main/
+    ├── java/
+    │   └── com/
+    │       └── yourapp/
+    │           ├── patient/
+    │           │   ├── controller/
+    │           │   │   └── PatientController.java
+    │           │   ├── service/
+    │           │   │   ├── PatientService.java
+    │           │   │   └── impl/
+    │           │   │       └── PatientServiceImpl.java
+    │           │   ├── model/
+    │           │   │   └── Patient.java
+    │           │   ├── repository/
+    │           │   │   └── PatientRepository.java
+    │           │   └── exception/
+    │           │       └── PatientNotFoundException.java
+    │           ├── doctor/
+    │           │   ├── controller/
+    │           │   ├── service/
+    │           │   │   └── impl/
+    │           │   ├── model/
+    │           │   ├── repository/
+    │           │   └── exception/
+    │           ├── appointment/
+    │           │   ├── controller/
+    │           │   ├── service/
+    │           │   │   └── impl/
+    │           │   ├── model/
+    │           │   ├── repository/
+    │           │   └── exception/
+    │           ├── billing/
+    │           │   ├── controller/
+    │           │   ├── service/
+    │           │   │   └── impl/
+    │           │   ├── model/
+    │           │   ├── repository/
+    │           │   └── exception/
+    │           ├── user/
+    │           │   ├── controller/
+    │           │   ├── service/
+    │           │   │   └── impl/
+    │           │   ├── model/
+    │           │   ├── repository/
+    │           │   └── exception/
+    │           └── config/
+    │               └── SecurityConfig.java
+    └── resources/
+        ├── application.properties
+        ├── static/
+        │   ├── css/
+        │   └── js/
+        └── templates/
+            └── index.html
