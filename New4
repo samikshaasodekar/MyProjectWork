@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HMS - Admin / Doctor / Patient Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Polished styling */
+    :root {
+      --sidebar-bg: #0f1724;
+      --accent: #0d6efd;
+      --card-radius: 12px;
+    }
+    body { background: #f3f6fa; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    #sidebar-wrapper { width: 260px; min-height:100vh; background: var(--sidebar-bg); color:#fff; }
+    #sidebar-wrapper .nav-link { color: #c7d2fe; border-left: 4px solid transparent; padding: 14px 20px; }
+    #sidebar-wrapper .nav-link.active, #sidebar-wrapper .nav-link:hover { background: rgba(255,255,255,0.03); border-left-color: var(--accent); color: #fff; }
+    .main-content { padding: 24px; }
+    .info-card { border-radius: var(--card-radius); box-shadow: 0 6px 20px rgba(15,23,36,0.06); padding: 18px; background: #fff; }
+    .small-muted { font-size: .85rem; color:#6b7280; }
+    .sidebar-header { padding:20px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.06) }
+    .avatar { width:60px; height:60px; border-radius:50%; object-fit:cover; }
+    .table thead th { border-bottom: 2px solid #e6eef8; }
+    .badge-status { font-weight:600; padding:.5em .7em; border-radius: 999px; }
+    /* Responsive */
+    @media (max-width: 768px) {
+      #sidebar-wrapper { position: fixed; z-index: 1040; transform: translateX(-280px); transition: transform .25s ease; }
+      #sidebar-wrapper.toggled { transform: translateX(0); }
+      #page-content-wrapper { padding-top:72px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper" class="d-flex flex-column">
+    <div class="sidebar-header text-center">
+      <img id="user-avatar" class="avatar mb-2" src="https://placehold.co/60x60/0d6efd/fff?text=H" alt="avatar"/>
+      <div id="user-name" class="fw-semibold">Guest</div>
+      <small id="user-role" class="small-muted">Not signed in</small>
+    </div>
+
+    <nav class="nav flex-column mt-3" id="sidebar-menu">
+      <a class="nav-link active" href="#" data-view="dashboard"> <i class="fas fa-home me-2"></i>Dashboard</a>
+      <a class="nav-link" href="#" data-view="patients"> <i class="fas fa-user-injured me-2"></i>Patients</a>
+      <a class="nav-link" href="#" data-view="doctors" data-role="admin"> <i class="fas fa-user-md me-2"></i>Doctor Management</a>
+      <a class="nav-link" href="#" data-view="appointments"> <i class="fas fa-calendar-check me-2"></i>Appointments</a>
+      <a class="nav-link" href="#" data-view="billing"> <i class="fas fa-file-invoice-dollar me-2"></i>Billing</a>
+      <hr class="text-white-10 mt-3 mb-2"/>
+      <a class="nav-link text-danger" href="#" id="logout-link"> <i class="fas fa-sign-out-alt me-2"></i>Sign Out</a>
+    </nav>
+
+    <div class="mt-auto p-3 small-muted text-center">
+      <small>Hospital Management System • Demo</small>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="flex-grow-1">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom px-3">
+      <button class="btn btn-outline-primary d-md-none me-2" id="btn-toggle"><i class="fas fa-bars"></i></button>
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <div id="top-welcome" class="small-muted">Welcome — <strong id="top-username">Guest</strong></div>
+        <button class="btn btn-sm btn-outline-secondary" id="login-btn">Sign In</button>
+      </div>
+    </nav>
+
+    <div class="container-fluid main-content">
+
+      <!-- Alerts / Toast placeholder -->
+      <div id="alert-area"></div>
+
+      <!-- 1. Dashboard -->
+      <div id="view-dashboard" class="view">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h3 class="mb-0">Dashboard</h3>
+            <small class="small-muted">Overview & quick actions</small>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-outline-primary me-2" id="refresh-dashboard"><i class="fas fa-sync-alt me-1"></i>Refresh</button>
+            <button class="btn btn-sm btn-primary" id="quick-add-patient-btn"><i class="fas fa-user-plus me-1"></i>Quick Patient</button>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-4" id="dashboard-cards">
+          <!-- summary cards injected here -->
+        </div>
+
+        <div class="info-card mb-4">
+          <h5>Newest Patients</h5>
+          <div class="table-responsive mt-3">
+            <table class="table table-hover">
+              <thead><tr><th>#</th><th>Name</th><th>Contact</th><th>Disease</th><th>Action</th></tr></thead>
+              <tbody id="dashboard-patient-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Patients -->
+      <div id="view-patients" class="view d-none">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div><h4 class="mb-0">Patients</h4><small class="small-muted">Manage patient records</small></div>
+          <div>
+            <button class="btn btn-sm btn-primary" id="btn-open-add-patient"><i class="fas fa-user-plus me-1"></i>Add Patient</button>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>DOB</th><th>Action</th></tr></thead>
+              <tbody id="patients-list-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Doctors -->
+      <div id="view-doctors" class="view d-none">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div><h4 class="mb-0">Doctors</h4><small class="small-muted">Add, edit or remove doctors</small></div>
+          <div><button class="btn btn-sm btn-success" id="btn-open-add-doctor"><i class="fas fa-plus me-1"></i>Add Doctor</button></div>
+        </div>
+
+        <div class="info-card">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead><tr><th>ID</th><th>Name</th><th>Speciality</th><th>Email</th><th>Action</th></tr></thead>
+              <tbody id="doctors-list-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Appointments -->
+      <div id="view-appointments" class="view d-none">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div><h4 class="mb-0">Appointments</h4><small class="small-muted">Schedule & manage appointments</small></div>
+          <div><button class="btn btn-sm btn-primary" id="btn-open-book-appointment"><i class="fas fa-calendar-plus me-1"></i>Book Appointment</button></div>
+        </div>
+
+        <div class="info-card">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date & Time</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody id="appointments-list-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Billing -->
+      <div id="view-billing" class="view d-none">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div><h4 class="mb-0">Billing</h4><small class="small-muted">Invoices & outstanding</small></div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="info-card text-center">
+              <div class="small-muted">Total Outstanding</div>
+              <h3 id="total-outstanding">$0.00</h3>
+              <small class="small-muted">Updated recently</small>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="info-card">
+              <h6>Recent Invoices</h6>
+              <div class="table-responsive mt-3">
+                <table class="table table-hover">
+                  <thead><tr><th>Invoice</th><th>Patient</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+                  <tbody id="invoices-list-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<!-- Login Modal -->
+<div class="modal fade" id="modal-login" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content info-card">
+      <div class="modal-header"><h6 class="mb-0">Sign in</h6></div>
+      <div class="modal-body">
+        <form id="login-form">
+          <div class="mb-3"><label class="form-label">Username</label><input id="login-username" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Password</label><input id="login-password" type="password" class="form-control" required></div>
+          <div class="form-text small-muted">Use admin/admin123 for quick demo (DataInitializer) or create users from API.</div>
+          <div class="mt-3 text-end">
+            <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-sm btn-primary" type="submit">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add / Book modals (patient/doctor/appointment/invoice) simplified -->
+<div class="modal fade" id="modal-add-patient" tabindex="-1"><div class="modal-dialog"><div class="modal-content info-card">
+  <div class="modal-header"><h6 class="mb-0">Add Patient</h6></div>
+  <div class="modal-body">
+    <form id="form-add-patient">
+      <div class="mb-2"><label class="form-label">Name</label><input id="p-name" class="form-control" required></div>
+      <div class="mb-2"><label class="form-label">Contact</label><input id="p-contact" class="form-control"></div>
+      <div class="mb-2"><label class="form-label">DOB</label><input id="p-dob" type="date" class="form-control"></div>
+      <div class="text-end"><button class="btn btn-sm btn-primary" type="submit">Save</button></div>
+    </form>
+  </div>
+</div></div></div>
+
+<div class="modal fade" id="modal-add-doctor" tabindex="-1"><div class="modal-dialog"><div class="modal-content info-card">
+  <div class="modal-header"><h6 class="mb-0">Add Doctor (Admin)</h6></div>
+  <div class="modal-body">
+    <form id="form-add-doctor">
+      <div class="mb-2"><label class="form-label">Username</label><input id="d-username" class="form-control" required></div>
+      <div class="mb-2"><label class="form-label">Password</label><input id="d-password" type="password" class="form-control" required></div>
+      <div class="mb-2"><label class="form-label">Name</label><input id="d-name" class="form-control" required></div>
+      <div class="mb-2"><label class="form-label">Specialization</label><input id="d-spec" class="form-control" required></div>
+      <div class="text-end mt-3"><button class="btn btn-sm btn-success" type="submit">Create Doctor</button></div>
+    </form>
+  </div>
+</div></div></div>
+
+<div class="modal fade" id="modal-book-appointment" tabindex="-1"><div class="modal-dialog"><div class="modal-content info-card">
+  <div class="modal-header"><h6 class="mb-0">Book Appointment</h6></div>
+  <div class="modal-body">
+    <form id="form-book-appointment">
+      <div class="mb-2"><label class="form-label">Patient ID</label><input id="a-patient" class="form-control" required></div>
+      <div class="mb-2"><label class="form-label">Doctor</label>
+        <select id="a-doctor" class="form-select" required><option value="">Select doctor...</option></select>
+      </div>
+      <div class="row g-2 mb-2">
+        <div class="col"><label class="form-label">Date</label><input id="a-date" type="date" class="form-control" required></div>
+        <div class="col"><label class="form-label">Time</label><select id="a-time" class="form-select" required><option value="">Choose time</option></select></div>
+      </div>
+      <div class="text-end"><button class="btn btn-sm btn-primary" type="submit">Book</button></div>
+    </form>
+  </div>
+</div></div></div>
+
+<!-- Toast container -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:1100">
+  <div id="toasts"></div>
+</div>
+
+<!-- Dependencies -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/*
+  Professional frontend file for HMS.
+  - Configure BASE_URL to point to your backend (e.g., http://localhost:9090)
+  - If your backend requires Basic Auth for admin actions, login stores credentials in memory (demo only).
+*/
+
+const CONFIG = {
+  BASE_URL: 'http://localhost:9090',   // <-- change if your backend is hosted elsewhere
+  // endpoints mapping (these match the backend code you shared)
+  ENDPOINTS: {
+    registerDoctor: '/api/admin/register-doctor',
+    registerPatient: '/api/user/register-patient',
+    bookAppointment: '/api/appointments/book',
+    cancelAppointment: (id) => `/api/appointments/${id}`,
+    getAppointments: '/api/appointments',    // fallback, we will use /api/appointments and filter client-side if needed
+    generateBill: '/api/bill/generate',
+    getBillsByPatient: (pid) => `/api/bill/by-patient/${pid}`
+  }
+};
+
+// in-memory auth (simple demo)
+let AUTH = { username: null, password: null, role: null };
+
+// ------------ Utility functions ------------
+function apiFetch(path, opts = {}) {
+  const headers = opts.headers || {};
+  headers['Content-Type'] = 'application/json';
+  // set basic auth header when credentials present
+  if (AUTH.username && AUTH.password) {
+    headers['Authorization'] = 'Basic ' + btoa(`${AUTH.username}:${AUTH.password}`);
+  }
+  return fetch(CONFIG.BASE_URL + path, {...opts, headers})
+    .then(async r => {
+      if (!r.ok) {
+        const txt = await r.text().catch(()=>null);
+        throw new Error(txt || r.statusText || 'Request failed');
+      }
+      // some endpoints may return no content
+      if (r.status === 204) return null;
+      const ct = r.headers.get('content-type') || '';
+      if (ct.includes('application/json')) return r.json();
+      return r.text();
+    });
+}
+
+function showToast(msg, type='info', timeout=3000) {
+  const id = 't' + Date.now();
+  const bg = (type==='success') ? 'bg-success text-white' : (type==='danger') ? 'bg-danger text-white' : (type==='warning' ? 'bg-warning' : 'bg-primary text-white');
+  const html = `
+    <div id="${id}" class="toast ${bg} border-0 mb-2" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="${timeout}">
+      <div class="d-flex">
+        <div class="toast-body">${msg}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>`;
+  $('#toasts').append(html);
+  const t = new bootstrap.Toast($("#" + id)[0]);
+  t.show();
+  setTimeout(()=> { try { $("#" + id).remove(); } catch(e){} }, timeout + 500);
+}
+
+function formatCurrency(n){ return Number(n).toLocaleString(undefined, {style:'currency', currency:'USD'}); }
+
+// ------------ Mock data fallback (keeps UI functional without backend) ------------
+const MOCK = {
+  dashboard: {
+    summary: [
+      { title: "New Patients", value: 3, icon: "fas fa-user-plus", color: "primary" },
+      { title: "Old Patients", value: 12, icon: "fas fa-user-check", color: "success" },
+      { title: "Total Patients", value: 15, icon: "fas fa-users", color: "warning" },
+      { title: "Resolved", value: 10, icon: "fas fa-check-circle", color: "danger" }
+    ],
+    patients: [
+      { id: 'P001', name: 'Virginia Rose', contact: '555-1234', disease: 'Mumps' },
+      { id: 'P002', name: 'Alex Johnson', contact: '555-5678', disease: 'Malaria' }
+    ]
+  },
+  doctors: [
+    { id:'D1001', name:'Dr. Evelyn Reed', specialization:'Cardiology', email:'e.reed@clinic.com' },
+    { id:'D1002', name:'Dr. Marcus Cole', specialization:'Neurology', email:'m.cole@clinic.com' }
+  ],
+  appointments: [
+    { id: 'A2001', patientId:'P001', patientName:'Virginia Rose', doctorId:'D1001', doctorName:'Dr. Evelyn Reed', date:'2025-10-20', time:'10:00', status:'Scheduled' }
+  ],
+  invoices: [
+    { id:'INV-001', patientId:'P001', amount:350.5, status:'Paid', date:'2025-10-15' },
+    { id:'INV-002', patientId:'P002', amount:100.0, status:'Pending', date:'2025-10-14' }
+  ]
+};
+
+// ------------ UI wiring & data rendering ------------
+
+function setUserUI(name, role){
+  $('#user-name').text(name);
+  $('#top-username').text(name);
+  $('#user-role').text(role ? role.toUpperCase() : 'GUEST');
+  $('#login-btn').text(role ? 'Signed in' : 'Sign In');
+}
+
+// show dashboard cards & patient list (use backend if available)
+async function loadDashboard(){
+  $('#dashboard-cards').empty();
+  $('#dashboard-patient-list').empty();
+  try {
+    // Option: backend endpoint to fetch dashboard summary, else use MOCK
+    // const data = await apiFetch('/api/dashboard'); // if you implement such endpoint
+    const data = MOCK.dashboard;
+    data.summary.forEach(s => {
+      $('#dashboard-cards').append(`
+        <div class="col-md-3">
+          <div class="info-card text-center">
+            <div class="small-muted">${s.title}</div>
+            <h4 class="mt-2">${s.value}</h4>
+          </div>
+        </div>`);
+    });
+    data.patients.forEach((p,i) => {
+      $('#dashboard-patient-list').append(`<tr><td>${i+1}</td><td>${p.name}</td><td>${p.contact}</td><td>${p.disease}</td><td><button class="btn btn-sm btn-outline-primary" onclick="viewPatient('${p.id}')">View</button></td></tr>`);
+    });
+  } catch(err){
+    showToast('Failed to load dashboard: ' + err.message, 'warning');
+  }
+}
+
+async function loadPatients(){
+  $('#patients-list-body').empty();
+  try {
+    // If you have endpoint: GET /api/patients (add repo/controller). Fallback to MOCK
+    const list = MOCK.patients || [];
+    list.forEach(p => {
+      $('#patients-list-body').append(`<tr><td>${p.id}</td><td>${p.name}</td><td>${p.contact}</td><td>${p.dob||'-'}</td><td><button class="btn btn-sm btn-outline-info" onclick="viewPatient('${p.id}')">View</button></td></tr>`);
+    });
+  } catch(err){
+    showToast('Failed to load patients: ' + err.message, 'danger');
+  }
+}
+
+async function loadDoctors(){
+  $('#doctors-list-body').empty();
+  $('#a-doctor').empty().append('<option value="">Select doctor...</option>');
+  try {
+    // fallback MOCK
+    const list = MOCK.doctors;
+    list.forEach(d => {
+      $('#doctors-list-body').append(`<tr><td>${d.id}</td><td>${d.name}</td><td>${d.specialization}</td><td>${d.email}</td><td><button class="btn btn-sm btn-outline-secondary" onclick="editDoctor('${d.id}')">Edit</button></td></tr>`);
+      $('#a-doctor').append(`<option value="${d.id}" data-name="${d.name}">${d.name} (${d.specialization})</option>`);
+    });
+  } catch(err){
+    showToast('Failed to load doctors: ' + err.message, 'warning');
+  }
+}
+
+async function loadAppointments(){
+  $('#appointments-list-body').empty();
+  try {
+    // ideally: GET /api/appointments or /api/doctor/appointments/{id}
+    const list = MOCK.appointments;
+    list.forEach(a => {
+      $('#appointments-list-body').append(`
+        <tr>
+          <td>${a.id}</td>
+          <td>${a.patientId} - ${a.patientName}</td>
+          <td>${a.doctorName}</td>
+          <td>${a.date} ${a.time}</td>
+          <td><span class="badge badge-status ${a.status==='Confirmed'?'bg-success':a.status==='Cancelled'?'bg-danger':'bg-primary'}">${a.status}</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline-danger" onclick="cancelAppointmentUI('${a.id}')"><i class="fas fa-times"></i></button>
+          </td>
+        </tr>`);
+    });
+  } catch(err){
+    showToast('Failed to load appointments: ' + err.message, 'danger');
+  }
+}
+
+async function loadBilling(){
+  try {
+    $('#invoices-list-body').empty();
+    $('#total-outstanding').text(formatCurrency(0));
+    const inv = MOCK.invoices;
+    let total = 0;
+    inv.forEach(i => {
+      $('#invoices-list-body').append(`<tr><td>${i.id}</td><td>${i.patientId}</td><td>${formatCurrency(i.amount)}</td><td>${i.status}</td><td>${i.date}</td></tr>`);
+      if (i.status !== 'Paid') total += i.amount;
+    });
+    $('#total-outstanding').text(formatCurrency(total));
+  } catch(err){
+    showToast('Failed to load billing: ' + err.message, 'warning');
+  }
+}
+
+// ------------ Actions: submit forms or call backend ------------
+
+$('#login-btn').click(()=> {
+  const modal = new bootstrap.Modal($('#modal-login')[0]);
+  modal.show();
+});
+$('#login-form').submit(async function(e){
+  e.preventDefault();
+  const u = $('#login-username').val().trim();
+  const p = $('#login-password').val().trim();
+  if(!u||!p) return showToast('Enter username and password','warning');
+  // Demo: set AUTH and role detection is naive; ideally call /api/auth/login or fetch current user endpoint
+  AUTH.username = u; AUTH.password = p; AUTH.role = (u==='admin'?'admin': (u.startsWith('doc')?'doctor':'patient'));
+  setUserUI(u, AUTH.role);
+  showToast('Signed in as ' + u, 'success');
+  $('#modal-login').modal('hide');
+  // after login, refresh views (if necessary)
+  refreshCurrentView();
+});
+
+$('#btn-toggle').on('click', ()=> { $('#sidebar-wrapper').toggleClass('toggled'); });
+
+$('#sidebar-menu .nav-link').click(function(e){
+  e.preventDefault();
+  $('#sidebar-menu .nav-link').removeClass('active');
+  $(this).addClass('active');
+  const view = $(this).data('view');
+  showView(view);
+});
+
+// create patient
+$('#btn-open-add-patient').click(()=> new bootstrap.Modal($('#modal-add-patient')[0]).show());
+$('#form-add-patient').submit(async function(e){
+  e.preventDefault();
+  const name = $('#p-name').val().trim();
+  const contact = $('#p-contact').val().trim();
+  const dob = $('#p-dob').val();
+  // call backend if available:
+  try {
+    // example payload matches RegisterPatientRequest (username, password, name, contact) - for quick demo we don't have username
+    // await apiFetch(CONFIG.ENDPOINTS.registerPatient, { method:'POST', body: JSON.stringify({ username: 'p'+Date.now(), password:'p@123456', name, contact})});
+    showToast('Patient saved (mock).', 'success');
+    $('#modal-add-patient').modal('hide');
+    loadDashboard(); loadPatients();
+  } catch(err){
+    showToast('Failed to add patient: '+err.message, 'danger');
+  }
+});
+
+// add doctor (calls backend /api/admin/register-doctor). Admin required.
+$('#btn-open-add-doctor').click(()=> new bootstrap.Modal($('#modal-add-doctor')[0]).show());
+$('#form-add-doctor').submit(async function(e){
+  e.preventDefault();
+  const username = $('#d-username').val().trim();
+  const password = $('#d-password').val().trim();
+  const name = $('#d-name').val().trim();
+  const specialization = $('#d-spec').val().trim();
+  if (!username || !password || !name) return showToast('Fill required fields', 'warning');
+
+  // call backend if available
+  try {
+    // registerDoctor expects RegisterDoctorRequest
+    const payload = { username, password, name, specialization };
+    // Attempt backend call; fallback to mock if it fails
+    try {
+      const res = await apiFetch(CONFIG.ENDPOINTS.registerDoctor, { method:'POST', body: JSON.stringify(payload) });
+      showToast('Doctor created: ' + res.username, 'success');
+    } catch (err) {
+      // fallback mock
+      MOCK.doctors.push({ id:'D'+Math.floor(Math.random()*9000)+1000, name, specialization, email: username+'@clinic.local' });
+      showToast('Doctor created (mock).', 'success');
+    }
+    $('#modal-add-doctor').modal('hide');
+    loadDoctors();
+  } catch (err) {
+    showToast('Error creating doctor: '+err.message, 'danger');
+  }
+});
+
+// open book appointment
+$('#btn-open-book-appointment').click(()=> {
+  new bootstrap.Modal($('#modal-book-appointment')[0]).show();
+});
+
+// when doctor select or date change -> compute slots (mock)
+$('#a-doctor, #a-date').on('change', function(){
+  const docId = $('#a-doctor').val(), date = $('#a-date').val();
+  $('#a-time').empty().append('<option value="">Choose time</option>');
+  if (!docId || !date) return;
+  // generate slots 09:00 - 17:00 every 30 min and remove booked ones (mock)
+  const start = new Date('2000-01-01 09:00'), end = new Date('2000-01-01 17:00');
+  while (start < end) {
+    const hh = start.getHours().toString().padStart(2,'0');
+    const mm = start.getMinutes().toString().padStart(2,'0');
+    const slot = `${hh}:${mm}`;
+    // check if booked in mock list
+    const booked = MOCK.appointments.some(a => a.doctorId === docId && a.date === date && a.time === slot && a.status !== 'Cancelled');
+    if (!booked) $('#a-time').append(`<option value="${slot}">${slot}</option>`);
+    start.setMinutes(start.getMinutes()+30);
+  }
+});
+
+// book appointment - call backend /api/appointments/book (AppointmentRequest)
+$('#form-book-appointment').submit(async function(e){
+  e.preventDefault();
+  const patientId = $('#a-patient').val().trim();
+  const doctorId = $('#a-doctor').val();
+  const date = $('#a-date').val();
+  const time = $('#a-time').val();
+  if (!patientId || !doctorId || !date || !time) return showToast('Missing fields', 'warning');
+
+  const payload = { doctorId: parseInt(doctorId.replace(/\D/g,'')) || doctorId, patientId: patientId, date, timeSlot: time };
+  // try backend post
+  try {
+    const res = await apiFetch(CONFIG.ENDPOINTS.bookAppointment, { method:'POST', body: JSON.stringify(payload) });
+    showToast('Appointment booked: ' + (res.id||'(id unknown)'), 'success');
+    new bootstrap.Modal($('#modal-book-appointment')[0]).hide();
+    // Reflect booked slot in mock list too (if backend not used)
+  } catch (err) {
+    // fallback: add to mock
+    const newId = 'A' + (Math.floor(Math.random()*900000)+1000);
+    MOCK.appointments.push({ id: newId, patientId, patientName:'(unknown)', doctorId, doctorName: $('#a-doctor option:selected').text().split(' (')[0], date, time, status:'Scheduled' });
+    showToast('Appointment booked (mock)', 'success');
+    $('#modal-book-appointment').modal('hide');
+  } finally {
+    loadAppointments();
+  }
+});
+
+// cancel appointment (UI)
+function cancelAppointmentUI(id){
+  // try DELETE backend
+  apiFetch(CONFIG.ENDPOINTS.cancelAppointment(id), { method: 'DELETE'}).then(()=>{
+    showToast('Appointment cancelled', 'success'); loadAppointments();
+  }).catch(err=>{
+    // fallback remove from mock
+    const idx = MOCK.appointments.findIndex(a=>a.id===id);
+    if (idx >= 0) {
+      MOCK.appointments[idx].status = 'Cancelled';
+      showToast('Appointment cancelled (mock)', 'success');
+      loadAppointments();
+    } else showToast('Failed to cancel: '+err.message,'danger');
+  });
+}
+
+// view patient (simple)
+function viewPatient(pid){ showToast('Open patient view: '+pid, 'info'); }
+
+// edit doctor placeholder
+function editDoctor(id){ showToast('Edit doctor: '+id, 'info'); }
+
+// quick refresh current view
+function refreshCurrentView(){
+  const active = $('#sidebar-menu .nav-link.active').data('view') || 'dashboard';
+  showView(active);
+  if (active==='dashboard') loadDashboard();
+}
+
+// show view by id
+function showView(name){
+  $('.view').addClass('d-none');
+  $('#view-' + name).removeClass('d-none');
+  // load data for view
+  if (name==='dashboard') loadDashboard();
+  if (name==='patients') loadPatients();
+  if (name==='doctors') loadDoctors();
+  if (name==='appointments') loadAppointments();
+  if (name==='billing') loadBilling();
+}
+
+// initial setup
+$(function(){
+  // default user UI
+  setUserUI('Guest', null);
+  // populate initial lists
+  loadDashboard();
+  loadDoctors();
+  loadAppointments();
+  loadBilling();
+
+  // hook buttons
+  $('#quick-add-patient-btn').click(()=> $('#modal-add-patient').modal('show'));
+  $('#refresh-dashboard').click(()=> loadDashboard());
+});
+
+// helper to change BASE_URL quickly (dev)
+window.setBackend = function(url){
+  CONFIG.BASE_URL = url;
+  showToast('Backend set to ' + url, 'info');
+};
+
+</script>
+</body>
+</html>
