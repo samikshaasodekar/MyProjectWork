@@ -1,0 +1,1619 @@
+package com.hms;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class HmsProjectApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(HmsProjectApplication.class, args);
+    }
+}package com.hms.model;
+
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+public class Appointment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long appointmentId;
+
+    private LocalDate appointmentDate;
+    private String timeSlot;
+
+    @Enumerated(EnumType.STRING)
+    private AppointmentStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
+    private Patient patient;
+
+    @ManyToOne
+    @JoinColumn(name = "doctor_id")
+    private Doctor doctor;
+
+    public Appointment() {}
+
+    public Appointment(Long appointmentId, LocalDate appointmentDate, String timeSlot,
+                       AppointmentStatus status, Patient patient, Doctor doctor) {
+        this.appointmentId = appointmentId;
+        this.appointmentDate = appointmentDate;
+        this.timeSlot = timeSlot;
+        this.status = status;
+        this.patient = patient;
+        this.doctor = doctor;
+    }
+
+    // getters & setters
+    public Long getAppointmentId() { return appointmentId; }
+    public void setAppointmentId(Long appointmentId) { this.appointmentId = appointmentId; }
+
+    public LocalDate getAppointmentDate() { return appointmentDate; }
+    public void setAppointmentDate(LocalDate appointmentDate) { this.appointmentDate = appointmentDate; }
+
+    public String getTimeSlot() { return timeSlot; }
+    public void setTimeSlot(String timeSlot) { this.timeSlot = timeSlot; }
+
+    public AppointmentStatus getStatus() { return status; }
+    public void setStatus(AppointmentStatus status) { this.status = status; }
+
+    public Patient getPatient() { return patient; }
+    public void setPatient(Patient patient) { this.patient = patient; }
+
+    public Doctor getDoctor() { return doctor; }
+    public void setDoctor(Doctor doctor) { this.doctor = doctor; }
+}package com.hms.model;
+
+public enum AppointmentStatus {
+    BOOKED,
+    CANCELLED
+}package com.hms.model;
+
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+public class Bill {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long billId;
+
+    private Double totalAmount;
+
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus paymentStatus;
+
+    private LocalDate billDate;
+
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
+    private Patient patient;
+
+    public Bill() {}
+
+    public Bill(Long billId, Double totalAmount, PaymentStatus paymentStatus,
+                LocalDate billDate, Patient patient) {
+        this.billId = billId;
+        this.totalAmount = totalAmount;
+        this.paymentStatus = paymentStatus;
+        this.billDate = billDate;
+        this.patient = patient;
+    }
+
+    // getters & setters
+    public Long getBillId() { return billId; }
+    public void setBillId(Long billId) { this.billId = billId; }
+
+    public Double getTotalAmount() { return totalAmount; }
+    public void setTotalAmount(Double totalAmount) { this.totalAmount = totalAmount; }
+
+    public PaymentStatus getPaymentStatus() { return paymentStatus; }
+    public void setPaymentStatus(PaymentStatus paymentStatus) { this.paymentStatus = paymentStatus; }
+
+    public LocalDate getBillDate() { return billDate; }
+    public void setBillDate(LocalDate billDate) { this.billDate = billDate; }
+
+    public Patient getPatient() { return patient; }
+    public void setPatient(Patient patient) { this.patient = patient; }
+}package com.hms.model;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Doctor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long doctorId;
+
+    private String name;
+    private String specialization;
+    private String contactNumber;
+
+    @Lob
+    private String availabilitySchedule;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public Doctor() {}
+
+    public Doctor(Long doctorId, String name, String specialization,
+                  String contactNumber, String availabilitySchedule, User user) {
+        this.doctorId = doctorId;
+        this.name = name;
+        this.specialization = specialization;
+        this.contactNumber = contactNumber;
+        this.availabilitySchedule = availabilitySchedule;
+        this.user = user;
+    }
+
+    // getters & setters
+    public Long getDoctorId() { return doctorId; }
+    public void setDoctorId(Long doctorId) { this.doctorId = doctorId; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getSpecialization() { return specialization; }
+    public void setSpecialization(String specialization) { this.specialization = specialization; }
+
+    public String getContactNumber() { return contactNumber; }
+    public void setContactNumber(String contactNumber) { this.contactNumber = contactNumber; }
+
+    public String getAvailabilitySchedule() { return availabilitySchedule; }
+    public void setAvailabilitySchedule(String availabilitySchedule) { this.availabilitySchedule = availabilitySchedule; }
+
+    public User getUser() { return user; }
+    public void setUser(User user) { this.user = user; }
+}package com.hms.model;
+
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+public class Patient {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long patientId;
+
+    private String name;
+    private LocalDate dateOfBirth;
+    private String gender;
+    private String contactNumber;
+    private String address;
+
+    @Lob
+    private String medicalHistory;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public Patient() {}
+
+    public Patient(Long patientId, String name, LocalDate dateOfBirth, String gender,
+                   String contactNumber, String address, String medicalHistory, User user) {
+        this.patientId = patientId;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.contactNumber = contactNumber;
+        this.address = address;
+        this.medicalHistory = medicalHistory;
+        this.user = user;
+    }
+
+    // getters & setters
+    public Long getPatientId() { return patientId; }
+    public void setPatientId(Long patientId) { this.patientId = patientId; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public LocalDate getDateOfBirth() { return dateOfBirth; }
+    public void setDateOfBirth(LocalDate dateOfBirth) { this.dateOfBirth = dateOfBirth; }
+
+    public String getGender() { return gender; }
+    public void setGender(String gender) { this.gender = gender; }
+
+    public String getContactNumber() { return contactNumber; }
+    public void setContactNumber(String contactNumber) { this.contactNumber = contactNumber; }
+
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
+
+    public String getMedicalHistory() { return medicalHistory; }
+    public void setMedicalHistory(String medicalHistory) { this.medicalHistory = medicalHistory; }
+
+    public User getUser() { return user; }
+    public void setUser(User user) { this.user = user; }
+}package com.hms.model;
+
+public enum PaymentStatus {
+    PAID,
+    UNPAID
+}package com.hms.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long userId;
+
+    @Column(unique = true, nullable = false)
+    private String username;
+
+    @Column(nullable = false)
+    private String password; // store encoded
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public User() {}
+
+    public User(Long userId, String username, String password, Role role) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
+    // getters & setters
+    public Long getUserId() { return userId; }
+    public void setUserId(Long userId) { this.userId = userId; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public Role getRole() { return role; }
+    public void setRole(Role role) { this.role = role; }
+}package com.hms.repository;
+
+import com.hms.model.Appointment;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.time.LocalDate;
+import java.util.List;
+
+public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
+    List<Appointment> findByDoctorDoctorId(Long doctorId);
+    List<Appointment> findByPatientPatientId(Long patientId);
+    boolean existsByDoctorDoctorIdAndAppointmentDateAndTimeSlot(Long doctorId, LocalDate date, String timeSlot);
+}package com.hms.repository;
+
+import com.hms.model.Bill;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface BillRepository extends JpaRepository<Bill, Long> {
+    List<Bill> findByPatientPatientId(Long patientId);
+}package com.hms.repository;
+
+import com.hms.model.Doctor;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DoctorRepository extends JpaRepository<Doctor, Long> {
+}package com.hms.repository;
+
+import com.hms.model.Patient;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PatientRepository extends JpaRepository<Patient, Long> {
+}package com.hms.repository;
+
+import com.hms.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
+}package com.hms.service;
+
+import com.hms.dto.AppointmentRequest;
+import com.hms.dto.AppointmentResponse;
+import com.hms.exception.BadRequestException;
+import com.hms.exception.ResourceNotFoundException;
+import com.hms.model.*;
+import com.hms.repository.AppointmentRepository;
+import com.hms.repository.DoctorRepository;
+import com.hms.repository.PatientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class AppointmentService {
+
+    private static final Logger logger = LoggerFactory.getLogger(AppointmentService.class);
+
+    @Autowired
+    private AppointmentRepository appointmentRepository;
+    @Autowired
+    private DoctorRepository doctorRepository;
+    @Autowired
+    private PatientRepository patientRepository;
+
+    public AppointmentResponse bookAppointment(AppointmentRequest request) {
+        logger.info("Booking appointment: patient={}, doctor={}, date={}, slot={}",
+                request.getPatientId(), request.getDoctorId(),
+                request.getAppointmentDate(), request.getTimeSlot());
+
+        Doctor doctor = doctorRepository.findById(request.getDoctorId())
+                .orElseThrow(() -> {
+                    logger.error("Doctor not found with id {}", request.getDoctorId());
+                    return new ResourceNotFoundException("Doctor not found");
+                });
+
+        Patient patient = patientRepository.findById(request.getPatientId())
+                .orElseThrow(() -> {
+                    logger.error("Patient not found with id {}", request.getPatientId());
+                    return new ResourceNotFoundException("Patient not found");
+                });
+
+        if (appointmentRepository.existsByDoctorDoctorIdAndAppointmentDateAndTimeSlot(
+                doctor.getDoctorId(), request.getAppointmentDate(), request.getTimeSlot())) {
+            logger.warn("Slot already booked for doctor {} on {} at {}",
+                    doctor.getDoctorId(), request.getAppointmentDate(), request.getTimeSlot());
+            throw new BadRequestException("Slot already booked");
+        }
+
+        Appointment appointment = new Appointment(null, request.getAppointmentDate(),
+                request.getTimeSlot(), AppointmentStatus.BOOKED, patient, doctor);
+
+        Appointment saved = appointmentRepository.save(appointment);
+        logger.info("Appointment booked successfully with id {}", saved.getAppointmentId());
+
+        return mapToResponse(saved);
+    }
+
+    public List<AppointmentResponse> getAppointmentsByDoctor(Long doctorId) {
+        logger.debug("Fetching appointments for doctor {}", doctorId);
+        return appointmentRepository.findByDoctorDoctorId(doctorId)
+                .stream().map(this::mapToResponse).collect(Collectors.toList());
+    }
+
+    public List<AppointmentResponse> getAppointmentsByPatient(Long patientId) {
+        logger.debug("Fetching appointments for patient {}", patientId);
+        return appointmentRepository.findByPatientPatientId(patientId)
+                .stream().map(this::mapToResponse).collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void cancelAppointment(Long appointmentId) {
+        logger.info("Cancelling appointment with id {}", appointmentId);
+
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> {
+                    logger.error("Appointment not found with id {}", appointmentId);
+                    return new ResourceNotFoundException("Appointment not found");
+                });
+
+        if (appointment.getStatus() == AppointmentStatus.CANCELLED) {
+            logger.warn("Appointment {} already cancelled", appointmentId);
+            throw new BadRequestException("Appointment already cancelled");
+        }
+
+        appointment.setStatus(AppointmentStatus.CANCELLED);
+        appointmentRepository.save(appointment);
+        logger.info("Appointment {} cancelled successfully", appointmentId);
+    }
+
+    private AppointmentResponse mapToResponse(Appointment a) {
+        return new AppointmentResponse(
+                a.getAppointmentId(),
+                a.getAppointmentDate(),
+                a.getTimeSlot(),
+                a.getDoctor().getDoctorId(),
+                a.getDoctor().getName(),
+                a.getPatient().getPatientId(),
+                a.getPatient().getName(),
+                a.getStatus().name()
+        );
+    }
+}package com.hms.service;
+
+import com.hms.dto.BillRequest;
+import com.hms.dto.BillResponse;
+import com.hms.exception.ResourceNotFoundException;
+import com.hms.model.Bill;
+import com.hms.model.Patient;
+import com.hms.model.PaymentStatus;
+import com.hms.repository.BillRepository;
+import com.hms.repository.PatientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class BillService {
+
+    private static final Logger logger = LoggerFactory.getLogger(BillService.class);
+
+    @Autowired
+    private BillRepository billRepository;
+    @Autowired
+    private PatientRepository patientRepository;
+
+    public BillResponse generateBill(BillRequest request) {
+        logger.info("Generating bill for patient {} with amount {}", request.getPatientId(), request.getTotalAmount());
+
+        Patient patient = patientRepository.findById(request.getPatientId())
+                .orElseThrow(() -> {
+                    logger.error("Patient not found with id {}", request.getPatientId());
+                    return new ResourceNotFoundException("Patient not found");
+                });
+
+        Bill bill = new Bill(null, request.getTotalAmount(), PaymentStatus.UNPAID,
+                             LocalDate.now(), patient);
+
+        Bill saved = billRepository.save(bill);
+        logger.info("Bill generated successfully with id {}", saved.getBillId());
+
+        return new BillResponse(saved.getBillId(), saved.getTotalAmount(),
+                                saved.getPaymentStatus().name(),
+                                saved.getBillDate(), saved.getPatient().getPatientId());
+    }
+
+    public List<BillResponse> getBillsByPatient(Long patientId) {
+        logger.debug("Fetching bills for patient {}", patientId);
+
+        return billRepository.findByPatientPatientId(patientId)
+                .stream()
+                .map(b -> new BillResponse(b.getBillId(), b.getTotalAmount(),
+                        b.getPaymentStatus().name(), b.getBillDate(),
+                        b.getPatient().getPatientId()))
+                .collect(Collectors.toList());
+    }
+}package com.hms.service;
+
+import com.hms.model.Role;
+import com.hms.model.User;
+import com.hms.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DataInitializer implements CommandLineRunner {
+
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Override
+    public void run(String... args) {
+        if (userRepository.findByUsername("admin").isEmpty()) {
+            User admin = new User(null, "admin", passwordEncoder.encode("admin123"), Role.ADMIN);
+            userRepository.save(admin);
+            System.out.println("Default ADMIN created: username=admin, password=admin123");
+        }
+    }
+}package com.hms.service;
+
+import com.hms.dto.DoctorResponse;
+import com.hms.dto.RegisterDoctorRequest;
+import com.hms.model.Doctor;
+import com.hms.model.Role;
+import com.hms.model.User;
+import com.hms.repository.DoctorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@Service
+public class DoctorService {
+
+    private static final Logger logger = LoggerFactory.getLogger(DoctorService.class);
+
+    @Autowired
+    private DoctorRepository doctorRepository;
+    @Autowired
+    private UserService userService;
+
+    public DoctorResponse registerDoctor(RegisterDoctorRequest request) {
+        logger.info("Registering doctor: {}", request.getName());
+
+        User user = userService.registerUser(request.getUsername(), request.getPassword(), Role.DOCTOR);
+
+        Doctor doctor = new Doctor();
+        doctor.setName(request.getName());
+        doctor.setSpecialization(request.getSpecialization());
+        doctor.setContactNumber("N/A");
+        doctor.setUser(user);
+
+        Doctor saved = doctorRepository.save(doctor);
+
+        logger.info("Doctor registered successfully with id: {}", saved.getDoctorId());
+
+        return new DoctorResponse(saved.getDoctorId(), saved.getName(),
+                                  saved.getSpecialization(), saved.getUser().getUsername());
+    }
+}package com.hms.service;
+
+import com.hms.dto.PatientResponse;
+import com.hms.dto.RegisterPatientRequest;
+import com.hms.model.Patient;
+import com.hms.model.Role;
+import com.hms.model.User;
+import com.hms.repository.PatientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@Service
+public class PatientService {
+
+    private static final Logger logger = LoggerFactory.getLogger(PatientService.class);
+
+    @Autowired
+    private PatientRepository patientRepository;
+    @Autowired
+    private UserService userService;
+
+    public PatientResponse registerPatient(RegisterPatientRequest request) {
+        logger.info("Registering patient: {}", request.getName());
+
+        User user = userService.registerUser(request.getUsername(), request.getPassword(), Role.PATIENT);
+
+        Patient patient = new Patient();
+        patient.setName(request.getName());
+        patient.setContactNumber(request.getContact());
+        patient.setUser(user);
+
+        Patient saved = patientRepository.save(patient);
+
+        logger.info("Patient registered successfully with id: {}", saved.getPatientId());
+
+        return new PatientResponse(saved.getPatientId(), saved.getName(),
+                                   saved.getContactNumber(), saved.getUser().getUsername());
+    }
+}package com.hms.service;
+
+import com.hms.model.Role;
+import com.hms.model.User;
+import com.hms.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Optional;
+
+@Service
+public class UserService implements UserDetailsService {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    /**
+     * Registration method for DoctorService and PatientService.
+     */
+    public User registerUser(String username, String password, Role role) {
+        logger.info("Registering new user with username: {}", username);
+
+        if (userRepository.findByUsername(username).isPresent()) {
+            logger.warn("Username {} already exists", username);
+            throw new RuntimeException("Username already exists");
+        }
+
+        User user = new User(null, username, passwordEncoder.encode(password), role);
+        User saved = userRepository.save(user);
+
+        logger.info("User registered successfully with id: {}", saved.getUserId());
+        return saved;
+    }
+
+    /**
+     * Implementation of Spring Security's UserDetailsService interface.
+     * Fetches user details for authentication.
+     */
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        logger.debug("Attempting to load user by username: {}", username);
+
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> {
+                    logger.error("User not found: {}", username);
+                    return new UsernameNotFoundException("User not found with username: " + username);
+                });
+
+        Collection<? extends GrantedAuthority> authorities = mapRolesToAuthorities(user.getRole());
+
+        // Return a Spring Security UserDetails object
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(), // Already encoded
+                authorities
+        );
+    }
+
+    private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Role role) {
+        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + role.name()));
+    }
+
+    public Optional<User> findByUsername(String username) {
+        logger.debug("Looking up user by username: {}", username);
+        return userRepository.findByUsername(username);
+    }
+} package com.hms.controller;
+ import com.hms.dto.DoctorResponse;
+ import com.hms.dto.RegisterDoctorRequest;
+ import com.hms.service.DoctorService;
+ import jakarta.validation.Valid;
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.*;
+ @RestController
+ @RequestMapping("/api/admin")
+ public class AdminController {
+    private static final Logger log = LoggerFactory.getLogger(AdminController.class);
+    @Autowired
+    private DoctorService doctorService;
+    @PostMapping("/register-doctor")
+    public ResponseEntity<DoctorResponse> registerDoctor(@Valid @RequestBody 
+RegisterDoctorRequest request) {
+        log.info("Admin requested doctor registration: username={}", request.getUsername());
+        DoctorResponse doctor = doctorService.registerDoctor(request);
+        log.info("Doctor registered: id={} username={}", doctor.getId(), doctor.getUsername());
+        return ResponseEntity.status(HttpStatus.CREATED).body(doctor);
+    }
+ }package com.hms.controller;
+
+import com.hms.dto.AppointmentRequest;
+import com.hms.dto.AppointmentResponse;
+import com.hms.service.AppointmentService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/appointments")
+public class AppointmentController {
+
+    @Autowired
+    private AppointmentService appointmentService;
+
+    @PostMapping("/book")
+    public ResponseEntity<AppointmentResponse> book(@Valid @RequestBody AppointmentRequest request) {
+        AppointmentResponse response = appointmentService.bookAppointment(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @GetMapping("/by-patient/{patientId}")
+    public ResponseEntity<List<AppointmentResponse>> getByPatient(@PathVariable Long patientId) {
+        return ResponseEntity.ok(appointmentService.getAppointmentsByPatient(patientId));
+    }
+
+    @GetMapping("/by-doctor/{doctorId}")
+    public ResponseEntity<List<AppointmentResponse>> getByDoctor(@PathVariable Long doctorId) {
+        return ResponseEntity.ok(appointmentService.getAppointmentsByDoctor(doctorId));
+    }
+
+    @DeleteMapping("/{appointmentId}")
+    public ResponseEntity<String> cancel(@PathVariable Long appointmentId) {
+        appointmentService.cancelAppointment(appointmentId);
+        return ResponseEntity.ok("Appointment cancelled successfully");
+    }
+}package com.hms.controller;
+
+import com.hms.dto.UserLoginRequest;
+import com.hms.dto.UserLoginResponse;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/auth")
+public class AuthController {
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @PostMapping("/login")
+    public ResponseEntity<UserLoginResponse> login(@Valid @RequestBody UserLoginRequest request) {
+        Authentication auth = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
+        );
+
+        if (auth.isAuthenticated()) {
+            return ResponseEntity.ok(
+                new UserLoginResponse("Login successful", request.getUsername(),
+                        auth.getAuthorities().iterator().next().getAuthority())
+            );
+        } else {
+            return ResponseEntity.status(401)
+                    .body(new UserLoginResponse("Invalid credentials", request.getUsername(), null));
+        }
+    }
+}package com.hms.controller;
+
+import com.hms.dto.BillRequest;
+import com.hms.dto.BillResponse;
+import com.hms.service.BillService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/bills")
+public class BillController {
+
+    @Autowired
+    private BillService billService;
+
+    @PostMapping("/generate")
+    public ResponseEntity<BillResponse> generate(@Valid @RequestBody BillRequest request) {
+        BillResponse response = billService.generateBill(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @GetMapping("/by-patient/{patientId}")
+    public ResponseEntity<List<BillResponse>> getByPatient(@PathVariable Long patientId) {
+        return ResponseEntity.ok(billService.getBillsByPatient(patientId));
+    }
+}package com.hms.controller;
+
+import com.hms.dto.DoctorResponse;
+import com.hms.dto.RegisterDoctorRequest;
+import com.hms.service.DoctorService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/doctors")
+public class DoctorController {
+
+    @Autowired
+    private DoctorService doctorService;
+
+    @PostMapping("/register")
+    public ResponseEntity<DoctorResponse> registerDoctor(@Valid @RequestBody RegisterDoctorRequest request) {
+        DoctorResponse response = doctorService.registerDoctor(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+}package com.hms.controller;
+
+import com.hms.dto.PatientResponse;
+import com.hms.dto.RegisterPatientRequest;
+import com.hms.service.PatientService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/patients")
+public class PatientController {
+
+    @Autowired
+    private PatientService patientService;
+
+    @PostMapping("/register")
+    public ResponseEntity<PatientResponse> registerPatient(@Valid @RequestBody RegisterPatientRequest request) {
+        PatientResponse response = patientService.registerPatient(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+}package com.hms.controller;
+
+import com.hms.dto.UserRegisterRequest;
+import com.hms.dto.UserResponse;
+import com.hms.model.Role;
+import com.hms.model.User;
+import com.hms.service.UserService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/user")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @PostMapping("/register")
+    public ResponseEntity<UserResponse> register(@Valid @RequestBody UserRegisterRequest request) {
+        User user = userService.registerUser(
+                request.getUsername(),
+                request.getPassword(),
+                Role.valueOf(request.getRole().toUpperCase())
+        );
+
+        UserResponse response = new UserResponse(user.getUserId(), user.getUsername(), user.getRole().name());
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+} check this all and remember it all and be simple
+
+
+package com.hms.dto;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
+import java.time.LocalDate;
+
+public class AppointmentRequest {
+    @NotNull
+    private Long doctorId;
+
+    @NotNull
+    private Long patientId;
+
+    @NotNull
+    private LocalDate appointmentDate;
+
+    @NotBlank
+    private String timeSlot;
+
+    public AppointmentRequest() {}
+
+    public AppointmentRequest(Long doctorId, Long patientId, LocalDate appointmentDate, String timeSlot) {
+        this.doctorId = doctorId;
+        this.patientId = patientId;
+        this.appointmentDate = appointmentDate;
+        this.timeSlot = timeSlot;
+    }
+
+    // getters & setters
+    public Long getDoctorId() { return doctorId; }
+    public void setDoctorId(Long doctorId) { this.doctorId = doctorId; }
+
+    public Long getPatientId() { return patientId; }
+    public void setPatientId(Long patientId) { this.patientId = patientId; }
+
+    public LocalDate getAppointmentDate() { return appointmentDate; }
+    public void setAppointmentDate(LocalDate appointmentDate) { this.appointmentDate = appointmentDate; }
+
+    public String getTimeSlot() { return timeSlot; }
+    public void setTimeSlot(String timeSlot) { this.timeSlot = timeSlot; }
+}package com.hms.dto;
+
+import java.time.LocalDate;
+
+public class AppointmentResponse {
+    private Long id;
+    private LocalDate appointmentDate;
+    private String timeSlot;
+    private Long doctorId;
+    private String doctorName;
+    private Long patientId;
+    private String patientName;
+    private String status;
+
+    public AppointmentResponse() {}
+
+    public AppointmentResponse(Long id, LocalDate appointmentDate, String timeSlot,
+                               Long doctorId, String doctorName,
+                               Long patientId, String patientName,
+                               String status) {
+        this.id = id;
+        this.appointmentDate = appointmentDate;
+        this.timeSlot = timeSlot;
+        this.doctorId = doctorId;
+        this.doctorName = doctorName;
+        this.patientId = patientId;
+        this.patientName = patientName;
+        this.status = status;
+    }
+
+    // getters & setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public LocalDate getAppointmentDate() { return appointmentDate; }
+    public void setAppointmentDate(LocalDate appointmentDate) { this.appointmentDate = appointmentDate; }
+
+    public String getTimeSlot() { return timeSlot; }
+    public void setTimeSlot(String timeSlot) { this.timeSlot = timeSlot; }
+
+    public Long getDoctorId() { return doctorId; }
+    public void setDoctorId(Long doctorId) { this.doctorId = doctorId; }
+
+    public String getDoctorName() { return doctorName; }
+    public void setDoctorName(String doctorName) { this.doctorName = doctorName; }
+
+    public Long getPatientId() { return patientId; }
+    public void setPatientId(Long patientId) { this.patientId = patientId; }
+
+    public String getPatientName() { return patientName; }
+    public void setPatientName(String patientName) { this.patientName = patientName; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+}package com.hms.dto;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
+public class BillRequest {
+    @NotNull
+    private Long patientId;
+
+    @NotNull
+    @Positive
+    private Double totalAmount;
+
+    public BillRequest() {}
+
+    public BillRequest(Long patientId, Double totalAmount) {
+        this.patientId = patientId;
+        this.totalAmount = totalAmount;
+    }
+
+    // getters & setters
+    public Long getPatientId() { return patientId; }
+    public void setPatientId(Long patientId) { this.patientId = patientId; }
+
+    public Double getTotalAmount() { return totalAmount; }
+    public void setTotalAmount(Double totalAmount) { this.totalAmount = totalAmount; }
+}package com.hms.dto;
+
+import java.time.LocalDate;
+
+public class BillResponse {
+    private Long id;
+    private Double totalAmount;
+    private String paymentStatus;
+    private LocalDate billDate;
+    private Long patientId;
+
+    public BillResponse() {}
+
+    public BillResponse(Long id, Double totalAmount, String paymentStatus,
+                        LocalDate billDate, Long patientId) {
+        this.id = id;
+        this.totalAmount = totalAmount;
+        this.paymentStatus = paymentStatus;
+        this.billDate = billDate;
+        this.patientId = patientId;
+    }
+
+    // getters & setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public Double getTotalAmount() { return totalAmount; }
+    public void setTotalAmount(Double totalAmount) { this.totalAmount = totalAmount; }
+
+    public String getPaymentStatus() { return paymentStatus; }
+    public void setPaymentStatus(String paymentStatus) { this.paymentStatus = paymentStatus; }
+
+    public LocalDate getBillDate() { return billDate; }
+    public void setBillDate(LocalDate billDate) { this.billDate = billDate; }
+
+    public Long getPatientId() { return patientId; }
+    public void setPatientId(Long patientId) { this.patientId = patientId; }
+}package com.hms.dto;
+
+public class DoctorResponse {
+    private Long id;
+    private String name;
+    private String specialization;
+    private String username;
+
+    public DoctorResponse() {}
+
+    public DoctorResponse(Long id, String name, String specialization, String username) {
+        this.id = id;
+        this.name = name;
+        this.specialization = specialization;
+        this.username = username;
+    }
+
+    // getters & setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getSpecialization() { return specialization; }
+    public void setSpecialization(String specialization) { this.specialization = specialization; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+}package com.hms.dto;
+
+public class PatientResponse {
+    private Long id;
+    private String name;
+    private String contact;
+    private String username;
+
+    public PatientResponse() {}
+
+    public PatientResponse(Long id, String name, String contact, String username) {
+        this.id = id;
+        this.name = name;
+        this.contact = contact;
+        this.username = username;
+    }
+
+    // getters & setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getContact() { return contact; }
+    public void setContact(String contact) { this.contact = contact; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+}package com.hms.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public class RegisterDoctorRequest {
+    @NotBlank
+    private String username;
+
+    @NotBlank
+    @Size(min = 6)
+    private String password;
+
+    @NotBlank
+    private String name;
+
+    @NotBlank
+    private String specialization;
+
+    public RegisterDoctorRequest() {}
+
+    public RegisterDoctorRequest(String username, String password, String name, String specialization) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.specialization = specialization;
+    }
+
+    // getters & setters
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getSpecialization() { return specialization; }
+    public void setSpecialization(String specialization) { this.specialization = specialization; }
+}package com.hms.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public class RegisterPatientRequest {
+    @NotBlank
+    private String username;
+
+    @NotBlank
+    @Size(min = 6)
+    private String password;
+
+    @NotBlank
+    private String name;
+
+    @NotBlank
+    private String contact;
+
+    public RegisterPatientRequest() {}
+
+    public RegisterPatientRequest(String username, String password, String name, String contact) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.contact = contact;
+    }
+
+    // getters & setters
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getContact() { return contact; }
+    public void setContact(String contact) { this.contact = contact; }
+}package com.hms.dto;
+
+import jakarta.validation.constraints.NotBlank;
+
+public class UserLoginRequest {
+    @NotBlank
+    private String username;
+
+    @NotBlank
+    private String password;
+
+    public UserLoginRequest() {}
+
+    public UserLoginRequest(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    // getters & setters
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+}package com.hms.dto;
+
+public class UserLoginResponse {
+    private String message;
+    private String username;
+    private String role;
+
+    public UserLoginResponse() {}
+
+    public UserLoginResponse(String message, String username, String role) {
+        this.message = message;
+        this.username = username;
+        this.role = role;
+    }
+
+    // getters & setters
+    public String getMessage() { return message; }
+    public void setMessage(String message) { this.message = message; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+}package com.hms.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public class UserRegisterRequest {
+    @NotBlank
+    private String username;
+
+    @NotBlank
+    @Size(min = 6)
+    private String password;
+
+    @NotBlank
+    private String role; // ADMIN, PATIENT, DOCTOR
+
+    public UserRegisterRequest() {}
+
+    public UserRegisterRequest(String username, String password, String role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
+    // getters & setters
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+}package com.hms.dto;
+
+public class UserResponse {
+    private Long id;
+    private String username;
+    private String role;
+
+    public UserResponse() {}
+
+    public UserResponse(Long id, String username, String role) {
+        this.id = id;
+        this.username = username;
+        this.role = role;
+    }
+
+    // getters & setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+}package com.hms.config;
+
+import com.hms.service.UserService;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.Arrays;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    private final UserService userService;
+
+    public SecurityConfig(UserService userService) {
+        this.userService = userService;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
+        AuthenticationManagerBuilder authenticationManagerBuilder = 
+                http.getSharedObject(AuthenticationManagerBuilder.class);
+        authenticationManagerBuilder.userDetailsService(userService).passwordEncoder(passwordEncoder());
+        return authenticationManagerBuilder.build();
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+            // 1. Disable CSRF (standard for stateless APIs)
+            .csrf(AbstractHttpConfigurer::disable)
+            
+            // 2. CONFIGURE CORS (Crucial Fix for network errors)
+            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+            
+            // 3. Define Authorization Rules (Ensure registration is public)
+            .authorizeHttpRequests(auth -> auth
+                // Allow public access for registration endpoints
+                .requestMatchers("/api/auth/**", "/api/patients/register", "/api/doctors/register").permitAll()
+                // Admin endpoints require ADMIN role
+                .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                // All other requests must be authenticated
+                .anyRequest().authenticated()
+            )
+            // 4. Use HTTP Basic Authentication
+            .httpBasic(Customizer.withDefaults());
+
+        return http.build();
+    }
+
+    /**
+     * CORS Configuration Source Bean
+     * Allows the frontend to access the backend API on different origins/ports.
+     */
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        // Allow all origins for the demo. In production, list specific frontend URLs.
+        configuration.setAllowedOrigins(Arrays.asList("*")); 
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("*")); 
+        configuration.setAllowCredentials(true); 
+        
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+}package com.hms.exception;
+
+import java.time.LocalDateTime;
+
+public class ApiError {
+    private LocalDateTime timestamp;
+    private int status;
+    private String error;
+    private String message;
+
+    public ApiError(int status, String error, String message) {
+        this.timestamp = LocalDateTime.now();
+        this.status = status;
+        this.error = error;
+        this.message = message;
+    }
+
+	public LocalDateTime getTimestamp() {
+		return timestamp;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public String getError() {
+		return error;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+}package com.hms.exception;
+
+public class BadRequestException extends RuntimeException {
+    public BadRequestException(String message) {
+        super(message);
+    }
+}package com.hms.exception;
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.ExceptionHandler;
+ import org.springframework.web.bind.annotation.RestControllerAdvice;
+ @RestControllerAdvice
+ public class GlobalExceptionHandler {
+    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ApiError> handleNotFound(ResourceNotFoundException ex) {
+        log.warn("Resource not found: {}", ex.getMessage());
+        ApiError error = new ApiError(HttpStatus.NOT_FOUND.value(), "Not Found", 
+ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ApiError> handleBadRequest(BadRequestException ex) {
+        log.warn("Bad request: {}", ex.getMessage());
+        ApiError error = new ApiError(HttpStatus.BAD_REQUEST.value(), "Bad Request", 
+ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiError> handleGeneric(Exception ex) {
+        log.error("Internal server error: ", ex);
+        ApiError error = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Error", 
+ex.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
+    }
+ }package com.hms.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+}package com.hms.security;
+ import com.hms.model.User;
+ import com.hms.repository.UserRepository;
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.security.core.userdetails.UserDetails;
+ import org.springframework.security.core.userdetails.UserDetailsService;
+ import org.springframework.security.core.userdetails.UsernameNotFoundException;
+ import org.springframework.security.core.authority.SimpleGrantedAuthority;
+ import org.springframework.stereotype.Service;
+ import java.util.Collections;
+ @Service
+ public class UserDetailsServiceImpl implements UserDetailsService {
+    private static final Logger log = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
+    @Autowired
+    private UserRepository userRepository;
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        log.debug("Loading user by username={}", username);
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> {
+                    log.warn("User not found: {}", username);
+                    return new UsernameNotFoundException("User not found: " + username);
+                });
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),
+                Collections.singleton(new SimpleGrantedAuthority("ROLE_" + 
+user.getRole().name()))
+        );
+    }
+ }spring.application.name=HMSProject
+
+# Database connection
+# FIX: Added 'createDatabaseIfNotExist=true' to the URL.
+# This tells the MySQL driver to create the 'hms' database if it is not found when connecting.
+spring.datasource.url=jdbc:mysql://localhost:3306/hms?useSSL=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA / Hibernate
+# 'update' is fine, but for clean testing, sometimes 'create-drop' is preferred.
+# We will keep 'update' as per your original file.
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# Server
+server.port=9090
+
+# Logging
+logging.level.org.springframework=INFO
+logging.level.com.hms=DEBUGpackage com.hms;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class HmsProjectApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.5.6</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>com.hms</groupId>
+  <artifactId>HMSProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>HMSProject</name>
+
+  <properties>
+    <java.version>17</java.version>
+  </properties>
+
+  <dependencies>
+    <!-- Core Spring Boot Starters -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Devtools -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- Database -->
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- Validation -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
+    <!-- Swagger / OpenAPI -->
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+
+    <!-- Testing -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Compiler plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+
+      <!-- Spring Boot plugin -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project> check this all and remember it all and be simple
+
+
