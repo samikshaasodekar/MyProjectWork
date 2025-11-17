@@ -1,0 +1,5559 @@
+Welcome to this Introduction to Service Management with Idle four.
+
+In this course you're going to get an excellent introduction to the world of I.T.
+
+Service management and the ideal for framework.
+
+Please note this course is not designed to be a complete study solution with everything you need to
+
+know to take and pass the four Foundation certification exam.
+
+Instead, this course is designed to get you started with idle four and to introduce you to the main
+
+concepts.
+
+This course allows you to see if Idle four is right for you and your organization.
+
+Now, once you've decided that idle four is right for you, your next step will be to earn your Idle
+
+four Foundation certification.
+
+As of November 1st, 2019, all training courses for the Idle four Foundation certification must be
+
+sold with the certification voucher included.
+
+Because this site doesn't support the sale of those vouchers, you can only buy our full idle four training
+
+course at DIAN training, where you're going to learn everything you need to know to take and pass the
+
+idle four Foundation exam on your first attempt.
+
+In addition to that, you're going to be exposed to the entire idle four framework there so you can
+
+learn how to best use it within your organization.
+
+Now, with that being said, that doesn't mean that this course isn't going to be valuable to you over
+
+the next hour or so.
+
+I'm going to provide you with the basics and the foundations of service management and a great introduction
+
+to Idle so that you can decide if you want to dive into this full certification process.
+
+So whether you're taking this course to learn about the idle floor framework or you're taking this course
+
+to prepare for the certification exam so you can get a new job or advancing your current organization.
+
+This course has been designed specifically to teach you all about service management and introduce you
+
+to the major concepts of idle four, such as the four dimensions of service management, the service
+
+value system, the guiding principles, the service value chain, continual improvement, and the 34
+
+practices of idle.
+
+At the end of our time together, I'll even give you an introduction to the certification exam so that
+
+you can see what it feels like to take the idle four foundation certification and see if that's going
+
+to be right for you.
+
+Now, before we dive into the course materials, let me provide you with a quick introduction to idle
+
+itself.
+
+If your boss enrolled you in this course, you may not even know what idle is or what it's used for.
+
+Idle is a framework for service management, but I guess that really begs the question, what is service
+
+management?
+
+Well, service management is a set of specialized organizational capabilities for enabling value to
+
+customers in the form of services.
+
+Now we're going to talk a lot about service management during our time together.
+
+In fact, the entirety of Section two is dedicated to the concepts of service management.
+
+Now, Idle was designed to provide organizations with a comprehensive framework for I.T.
+
+Service management.
+
+In fact, IDLE is the world's most popular and most widely used i.t service management framework.
+
+And it's one of the reasons why the idle foundation certification is in really high demand, because
+
+most large companies have built their i.t.
+
+Service management systems and processes around the idle framework.
+
+So now that I've hopefully gotten you all excited about idle, I need to take a quick detour and introduce
+
+myself and share four important tips to help you learn better during our time together.
+
+First, my name is Jason Dion and I am the lead instructor here at Dion Training Solutions.
+
+I've been working in the I.T and cybersecurity field for over two decades for organizations both large
+
+and small.
+
+In all of these organizations, though, there is one common thread and that was idle.
+
+When I talk about small organizations, I'm talking about companies with less than about 20 people,
+
+companies like my own.
+
+Now, when I mentioned large organizations, one of my last positions was with an organization that
+
+spanned six continents, dozens of countries and millions of users.
+
+And guess what?
+
+Both these small companies and these large companies all ran on idle.
+
+Now, I'm not just an instructor of idle, but I'm also a practitioner of the idle framework with decades
+
+of experience.
+
+Rest assured, you are in great hands with me.
+
+In fact, I'm an authorized instructor for Idle and my company is an ATO, an accredited training organization
+
+for people served on behalf of zealous the creators of the idle framework and the certification exams.
+
+All of our courses are reviewed by them prior to us releasing them to you to ensure you're getting the
+
+quality training that you deserve.
+
+Now for my four tips to success in this course.
+
+First, for every video in this course, you have the ability to turn on closed captioning.
+
+Each video is captioned by a real human to ensure accuracy.
+
+And this allows you to read along with the course if you need to.
+
+Many of my students who speak English as their second language really love having those captions playing
+
+along with the videos because it aids in their learning.
+
+If you want to enable closed captions, simply click on the CC button in the bottom of your video player.
+
+My second tip is about playback speed.
+
+Some of my students say that I talk too fast, while others say I speak too slowly.
+
+Either way, you get to control the speed of instruction by clicking on the one x button in the bottom
+
+of your video player.
+
+If you want me to go faster, simply select 1.25 x or 1.5 x if you want me to go slower.
+
+Simply click on 0.75 x or 0.5 X faster or slower.
+
+The choice is yours.
+
+Now my third tip and.
+
+One of the most important tips is about our student support group.
+
+We have a student support group with several thousand other students who are learning Eidl and other
+
+I.T. and project management certifications through all of our various courses.
+
+If you want to join the fun there, it is completely free to do.
+
+And you can find us at Facebook.com groups slash D on training once their request to join this private
+
+group.
+
+And we'll let you in.
+
+In this group, we answer questions.
+
+We put out additional free content and we help support each other through our IT careers.
+
+Also, if you ask your questions there, you're likely to get an answer within just a few minutes,
+
+most of the time, because we have thousands of other students, both past and present, who join in
+
+our conversations there.
+
+So if you're on Facebook, I really recommend joining that group today.
+
+Now, the fourth and final tip is that this course comes with a downloadable study guide as a PDF in
+
+the next lesson.
+
+To access it, simply download it from the resources in the next lesson and then you can print it out
+
+and refer to it during your offline studies.
+
+Now, with all of the introductions behind us, let's get started learning all about it.
+
+Service management with idle for.
+
+
+
+
+
+
+
+
+
+
+
+Back when you attended school as a child,
+
+you may have learned about the industrial revolution.
+
+The first industrial revolution occurred in the
+
+18th and 19th centuries, all across Europe and America.
+
+During this period, humanity moved from
+
+an agrarian-based rural society of farmers
+
+into an urbanized, industrial area,
+
+that later developed into
+
+some of our country's largest cities.
+
+This movement was brought about by the development
+
+of mechanization in the form of iron and textile industries,
+
+as well as the power of the steam engine
+
+for our transportation needs.
+
+The industrial revolution was only the first one though,
+
+by the end of the 19th century,
+
+and continuing until World War I,
+
+or the Great War, as it's known in Europe,
+
+humanity moved into the second industrial revolution.
+
+During this time, our industries expanded
+
+to include steel, oil, electricity,
+
+and electrically-powered equipment to aid
+
+in the mass production of goods.
+
+During this time period, cars were developed
+
+with their internal combustion engines,
+
+that made transportation even more convenient and efficient.
+
+At the same time, the light bulb
+
+began to replace candlelight,
+
+allowing us to work longer into the night.
+
+And of course, communication across great distances
+
+became possible through the use of our telephones.
+
+Life was better than it had ever been before,
+
+but humanity wasn't done exploring and inventing yet.
+
+Technology continued to expand in its use,
+
+but there weren't any real major breakthroughs
+
+until the end of the 20th century.
+
+It was around 1980 and technology
+
+had jumped to yet another level.
+
+This was way beyond what existed in the
+
+second industrial revolution.
+
+It was at this time that the third industrial revolution,
+
+known as the digital revolution, truly began.
+
+With the advancement of analog and digital electronics,
+
+humanity began to utilize life-changing technologies
+
+on a daily basis, including the personal computer,
+
+the Internet, and the entire spectrum
+
+of information and communication technologies.
+
+Many of these things are the things
+
+you're responsible for within your organization,
+
+and it was during this third industrial revolution
+
+that ITIL was first created.
+
+ITIL was first developed as a series of
+
+best practices and guidance
+
+on how to run an information technology organization.
+
+In fact, ITIL, as it was originally developed,
+
+was an acronym that stood for
+
+Information Technology Infrastructure Library.
+
+ITIL began in the 1980s as a way for organizations
+
+to create processes and procedures
+
+to better run their IT systems.
+
+Throughout the last three decades,
+
+ITIL became the de facto standard
+
+around the world for IT service management.
+
+As we moved as a society from the
+
+first industrial revolution, to the second,
+
+and then onto the third,
+
+we're now at a crossroads again.
+
+Now, we're moving into the fourth industrial revolution,
+
+and it is happening right now.
+
+The fourth industrial revolution is marked
+
+by the creation of cyber-physical systems,
+
+where a fusion of technologies has blurred the lines
+
+between physical and digital realms.
+
+This includes the use of technologies like
+
+robotics, nanotechnology,
+
+artificial intelligence, the Internet of things,
+
+autonomous cars, and so much more.
+
+This explosive growth in technology
+
+in the early 21st century has transformed
+
+our world economies, as well as ourselves.
+
+So, you may be wondering right now,
+
+"Why are we spending time talking about the history
+
+of various industrial revolutions that occurred
+
+over the past few hundred years?"
+
+Well, it's to make this point:
+
+ITIL 4 is not considered ITIL version 4,
+
+instead it's ITIL for the fourth industrial revolution.
+
+ITIL is no longer considered an acronym.
+
+ITIL is a brand name.
+
+It simply means ITIL, it doesn't mean
+
+Information Technology Infrastructure Library anymore,
+
+because ITIL is more than just infrastructure.
+
+This is a major shift in the way ITIL approaches
+
+the challenges of IT service management
+
+based on this as well.
+
+
+
+
+
+
+
+
+
+
+
+In today's digital economy,
+
+every organization in the world
+
+has become a service organization.
+
+You may think your organization
+
+isn't a service organization,
+
+but when you really look at what it does on a daily basis,
+
+it truly is a service organization.
+
+For example,
+
+you may work for a grocery store,
+
+and you may think you're in the business
+
+of selling milk and cereal,
+
+which are both products,
+
+but in reality, you're probably really
+
+a service organization too.
+
+Most of the services,
+
+if not all of the services
+
+that your company currently owns and manages,
+
+is done to co-create value with your customers.
+
+And these are enabled by information technology.
+
+Now, how can I make this claim?
+
+Well, let's consider the large retailer like Walmart,
+
+who sells a large variety of different products,
+
+from diapers to groceries to electronics and car tires.
+
+Walmart has been wildly successful
+
+in selling all of these different products,
+
+but the particular products Walmart sells,
+
+doesn't really matter that much.
+
+Instead the real reason that Walmart has been so successful,
+
+is that their available to provide a service
+
+to their customers that no one else
+
+has been able to do the way they have.
+
+And that is a collection of services that's enabled by IT.
+
+Walmart, for example,
+
+has created a wonderfully robust
+
+distribution and logistics system
+
+to get their products to their stores quickly,
+
+efficiently, and more cost-effectively than other people.
+
+And this allows them to rely
+
+on complex inventory tracking and logistic systems,
+
+that are all run by various IT components and services.
+
+They've been able to do this to provide products
+
+at their everyday low price,
+
+which is actually the service
+
+they provide to their customers.
+
+Walmart's service is bringing you the products
+
+you want or need at the lowest price, always.
+
+Other stores can't bring that to you at the same level
+
+or the same cost that Walmart can.
+
+So, in a price battle,
+
+Walmart is going to win every time,
+
+because of their ability to embrace IT
+
+to enable their services.
+
+But how is Walmart co-creating value with me,
+
+the customer?
+
+Lets say I was having a party tonight,
+
+and I've invited you over for dinner.
+
+I might run over to Walmart to buy all the supplies I need.
+
+Things like meat and cheeses,
+
+vegetables and drinks,
+
+and I bring them all back to my kitchen.
+
+I then use all those ingredients
+
+to cook a meal for my party tonight.
+
+The value isn't the ingredients that I got from Walmart.
+
+It's the outcome that I had
+
+when I co-created value with Walmart.
+
+Walmart provided all the ingredients at a low price,
+
+and I've provided the ability to cook it all up
+
+into a delicious meal.
+
+Now, the value is the happiness and the full bellies
+
+of all of my guests at my party.
+
+This is the value co-created through the service.
+
+Now, as you think about all the different industries
+
+and organizations in the world,
+
+it's really hard to think of any
+
+that aren't providing some kind of service
+
+that is enabled by technology.
+
+Because of this, technology has become commonplace
+
+in the modern workplace.
+
+But all of this technology needs to be managed
+
+in order for it to be effective and enabling value
+
+to your customers by providing services.
+
+And this brings us to the concept of service management.
+
+Service management is defined
+
+as a set of specialized organizational capabilities
+
+for enabling value to customers in the form of services.
+
+The purpose of ITIL 4 is to provide organizations,
+
+working in this modern service economy,
+
+with guidance from managing their information technology
+
+and information technology dependencies effectively,
+
+efficiently, and in some coordinated,
+
+structured, and integrated way
+
+that combines the agility,
+
+the time to market,
+
+and their ability to deliver new things faster,
+
+while using their risk controls and providing insurance
+
+that the services will be performed properly today,
+
+tomorrow, and any day further off into the future.
+
+Notice, this isn't just about providing a service
+
+fast to a customer,
+
+but it's also about being able to balance that
+
+with the proper controls so that
+
+that is providing a quality service,
+
+now and into the future.
+
+This ensures that there's a balance of speed
+
+in control within our organizations and their services.
+
+Simply put, ITIL 4 provides organizations
+
+with a comprehensive framework for IT service management.
+
+This framework is designed to ensure that an effective,
+
+efficient, flexible,
+
+coordinated, and integrated system
+
+for the governance and management
+
+of services is established.
+
+It also is concerned with ensuring that these services
+
+are continually improving within your organization.
+
+Now, if you're new to the business world
+
+or information technology,
+
+the word "governance"
+
+might be one that you're not quite familiar with.
+
+Governance is simply the means
+
+by which an organization is directed and controlled.
+
+This means that it involves all of the processes needed
+
+to govern or oversee the running of the organization.
+
+For example, in the United States,
+
+our government creates rules and laws that are used
+
+as a method to direct the actions of its citizens.
+
+This is called governance, right?
+
+It's the way that we operate a country.
+
+Well, organizations need governance too.
+
+And at your company,
+
+there's a process probably for everything you need to do.
+
+Think about it if you wanted to take two weeks of vacation.
+
+You couldn't simply decide just to not go to work
+
+for two weeks without telling your boss, right?
+
+You'd probably end up losing your job.
+
+Now, instead,
+
+you're going to go through the process to request a vacation,
+
+and that process is going to be different
+
+based on your organization or my organization.
+
+Because each organization runs itself
+
+and its processes differently.
+
+That way that they run things,
+
+that's known as governance.
+
+
+
+
+
+
+
+
+
+As I stated in the last section of this course,
+
+ITIL is a framework for
+
+information technology service management, known as ITSM.
+
+According to ITIL Four,
+
+service management is defined as
+
+a set of specialized organizational capabilities
+
+for enabling value to customers in the form of services.
+
+Whenever we speak about an organizational capability,
+
+such as in this definition of service management,
+
+this is referring to an organization having both
+
+the capacity and the ability
+
+to perform the functions required.
+
+Service management, whether you're performing it
+
+using ITIL Four as its framework or another ITSM framework,
+
+is focused on how to best create value
+
+within an organization to provide
+
+the desired benefits to your consumers.
+
+Now to do that, an organization must organize its people
+
+to best support the organization's activities,
+
+practices, and processes.
+
+These activities, practices, and processes are the engine
+
+that drive the creation of the organization's products
+
+and their services,
+
+but none of these activities, practices, and processes
+
+could be done in isolation.
+
+Instead, we have to consider the service relationships
+
+that are built, created, and nurtured throughout
+
+the service management process.
+
+In this section of the course,
+
+we're going to discuss these generalized concepts
+
+of service management that apply to both ITIL Four
+
+and other frameworks.
+
+Then, we're going to spend a bit of time going over
+
+the concepts of outcomes, risks, utility, and warranty
+
+to help build a solid foundation before we move into
+
+the specific ITIL Four concepts that are covered
+
+throughout the rest of this course.
+
+So let's get started learning about service management
+
+and its key concepts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is value?
+
+Well in ITL 4, value is the perceived benefits,
+
+usefulness, and importance of something.
+
+Now I know this is very generic.
+
+But let's dig into the short definition and explore it a bit
+
+because value is an extremely important concept
+
+inside of ITIL and service management in general.
+
+First, notice in the definition that value is perceived.
+
+This means that the amount of value
+
+something has is always subjective.
+
+Who gets to determine this perceived amount of value?
+
+Well the privilege is reserved
+
+for the recipient of the value.
+
+So let me give you an example to help clarify it.
+
+There's two roommates, Julia and John.
+
+One afternoon, they both decide
+
+they want to go get an orange.
+
+They walk over to the refrigerator
+
+to each get themself an orange
+
+and find that there's only one left in the fruit drawer.
+
+They begin to fight with each other
+
+because each person really wants that orange for themselves.
+
+Julia says she values the orange more
+
+and she should have it.
+
+But John quickly retorts that he values the orange more
+
+and that he should have it.
+
+Neither person explains to the other
+
+why they want the orange.
+
+Instead they don't tell them about the value
+
+they perceive that it has.
+
+But being omniscient as the narrator in this example,
+
+I know exactly what each of them
+
+wants to do with that orange.
+
+Julia's hungry and she desired to have
+
+a sweet and healthy afternoon snack.
+
+So if she gets the orange, she plans to cut it apart,
+
+eat the sweet, juicy flesh inside of it,
+
+and throw away the peel.
+
+Now in her perceived value of this orange,
+
+the inside of the orange holds 100% of the value
+
+and the peel is garbage, it's worthless.
+
+John on the other hand, he's a baker,
+
+and this afternoon he wanted to make some orange cupcakes.
+
+So he needed the orange peel
+
+to be able to zest it into the batter.
+
+If he gets the orange, he intends to simply use the peel
+
+and throw away the orange and sweet inside into the trash.
+
+Unlike Julia who places 100% of the orange's value
+
+on it's ability to be eaten as an afternoon snack,
+
+John believes that that part of the orange
+
+is completely worthless.
+
+Instead, he places 100% of the value into the orange peel.
+
+Now I'm sure you can see the
+
+interesting thing here about value.
+
+This one orange could serve 100% of the needs
+
+for each person involved in this transaction.
+
+If only they could communicate
+
+their true desires for that orange.
+
+They could both have 100% of the value
+
+because the value is perceived by the end recipient.
+
+And in this case, our two roommates
+
+each view it differently.
+
+Now to the grocer who was
+
+the original supplier of this orange,
+
+he sold that orange for a single dollar.
+
+Had he'd known that they both value that $1 orange
+
+for different reasons, maybe he would have
+
+cut the orange apart, separate the insides
+
+away from the peel and sold each portion for a dollar each.
+
+And if he done that to each of the roommates,
+
+he would have doubled the orange's value for himself.
+
+Now I know that sounds a little crazy,
+
+but I bet on exam day you're going to
+
+remember about this orange and value.
+
+You're going to remember that the amount of value
+
+that something has is based on
+
+the recipient's perception of that value right?
+
+It's the recipient that actually is
+
+expected to get the value from the products,
+
+from those relationships, from those services,
+
+from whatever it is we're expecting to deliver,
+
+or to facilitate the value for them.
+
+Because of this, value is always considered subjective.
+
+And it can be quite different
+
+from what the original supplier planned for.
+
+It may be different from what they
+
+had described the product as
+
+or what service it was going to fulfill,
+
+and from what we originally agreed to.
+
+This subjectivity should be captured,
+
+measured, and evaluated because
+
+this is what we have to work with as an organization
+
+that performs service management.
+
+Now let's get back to our definition of value once more.
+
+Value is the perceived benefits,
+
+usefulness, and importance of something.
+
+As I said before this definition is a bit generic right.
+
+This is because it uses this vague term of something.
+
+This word was specifically chosen by the creator's of ITIL
+
+because service management goes beyond
+
+just services these days.
+
+Because the perceived benefits and usefulness of something
+
+really do depend on the context
+
+that it's being talked about.
+
+In each given context, we know what that something is.
+
+And we know what it means in the value definition.
+
+But in a generic definition like this,
+
+we can't simply list all of the things something could be.
+
+So something becomes that placeholder.
+
+Because when we talk about value,
+
+value is really based on these relationships as well.
+
+And we're going to discuss those
+
+service relationships in a future lesson.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Organizations and people.
+
+When we've discussed the concept of an organization
+
+inside of ITIL 4,
+
+the organization is not limited
+
+to a service provider organization,
+
+or an internal information technology organization,
+
+or even an information technology organization at large.
+
+Instead, we're just looking at this
+
+as a generic organization.
+
+But what exactly is an organization anyway?
+
+Well, ITIL 4 defines an organization
+
+as a person or a group of people
+
+that has its own functions with responsibilities,
+
+authorities, and relationships to achieve its objectives.
+
+Notice this definition is pretty generic
+
+and, again, this is done on purpose by the creators of ITIL
+
+because it allows ITIL to be more widely used
+
+and adapted to any organization.
+
+In ITIL 4, there are two basic roles
+
+that an organization can fulfill.
+
+A service provider is a role performed by an organization
+
+in a service relationship to provide services to consumers.
+
+Conversely, a consumer is a role
+
+performed by an organization in the relationship
+
+that uses or consumes those services.
+
+Organizations vary in size and complexity as well.
+
+Now, organizations can also vary in their legal structure,
+
+in that they can be a single person, a team,
+
+or even a complex multinational corporation.
+
+What really bounds an organization together
+
+is a set of common objectives,
+
+relationships, and authorities.
+
+Now, this may seem strange,
+
+especially when considering a single person
+
+that can act as an organization,
+
+but it really does work this way in the real world.
+
+When I created my company Dion Training Solutions,
+
+it was created as a sole proprietorship originally.
+
+I was a single person operating as an organization
+
+in all of my business relationships.
+
+Now, an organization can be a team of people
+
+working towards a common objective too.
+
+As my company has gotten bigger,
+
+we now have two teams of people
+
+which make up two distinct organizations
+
+within the company.
+
+One is the training team, which I lead,
+
+and the other is our operations team,
+
+which my director of operations leads.
+
+This is an example of how people organize
+
+around common goals within a larger business organization
+
+to achieve common objectives in a coordinated method.
+
+Now, in most of these cases,
+
+the common objectives are usually
+
+trying to create value for the consumer,
+
+but the way value is actually achieved
+
+has changed in ITIL 4.
+
+Previously, value was considered something
+
+that was delivered from a service provider
+
+to the consumer of the service.
+
+But this wasn't entirely accurate
+
+the way it was done in the real world.
+
+In fact, it was so inaccurate that sayings like,
+
+delivering something is easy
+
+but delivering something of value is hard,
+
+began to spring up all throughout
+
+the IT management service industry.
+
+So instead, ITIL 4 recognizes that value must be co-created
+
+by the service provider and the consumer.
+
+Now, what does this mean for us in the real world?
+
+Well, let's take this course as an example.
+
+My team and I have spent a lot of time
+
+preparing this course, filming this course,
+
+editing this course, and publishing this course,
+
+so that you can get value from it.
+
+But we have to co-create that value together.
+
+As the supplier, I've provided you with all the videos,
+
+the quizzes, the practice exam, the web servers,
+
+access to the training, downloadable PDFs, all of that.
+
+But as the consumer you have to actually watch those videos,
+
+study the definitions, practice with the quizzes,
+
+take the practice exam,
+
+not to mention you have to have
+
+a laptop, a tablet, or a phone
+
+to even access these videos and be able to watch them,
+
+as well as a stable high-speed Internet connection.
+
+To achieve the desired outcome and value from this course,
+
+we both have to work hard
+
+and meet our ends of this obligation.
+
+That's the idea of co-creation of value
+
+by the service provider, me and my team,
+
+and you, the consumer.
+
+This is how it works inside of ITIL 4.
+
+Now, as much as I'd love be able
+
+to simply create the value for you
+
+as soon as you make the purchase,
+
+we don't have that technology yet
+
+to instantly load up the information into your head.
+
+This isn't "The Matrix," after all.
+
+Instead, you have to help me
+
+to create the value we both want.
+
+As the supplier, I can try really hard
+
+to deliver that value,
+
+but if you as the consumer don't actually cooperate
+
+and turn on the videos and watch them,
+
+well, then the value simply won't be created,
+
+because the value is the outcome.
+
+This is why relationships between organizations
+
+such as the supplier and the consumer
+
+have become very complex.
+
+In its simplest form,
+
+the provider will deliver a service,
+
+the consumer will pay for the service,
+
+and the provider then uses that money
+
+to create more services
+
+while the consumer uses the current service they paid for.
+
+Now, if both sides are getting the value they desire
+
+from that transaction, then this is mutually beneficial.
+
+If the value is not achieved
+
+by either of these sides, though,
+
+then it's likely that this relationship
+
+will soon come to an end
+
+and no more value will emerge from it.
+
+Unfortunately, the real world is much more complex
+
+than the simple example of value creation I just gave.
+
+At any moment, an organization can be
+
+a consumer and a provider for multiple services.
+
+Let's take my organization, for example.
+
+I'm a supplier in relation to you,
+
+but I'm also a consumer in my relationship
+
+with my web hosting provider.
+
+These are just different hats being worn by my organization
+
+depending on which perspective we're looking at things from.
+
+This means that when my organization
+
+is acting as a consumer,
+
+we co-create value by consuming services,
+
+and when we're acting as a provider,
+
+we co-create value by providing services
+
+to other organizations and people.
+
+Organizations recognize that value is co-created
+
+through an active collaboration
+
+between providers and consumers
+
+as well as other organizations
+
+that are part of the relevant service relationships.
+
+These service provider and service consumer roles
+
+are the two generic roles that an organization can fulfill.
+
+People, though, can fulfill three other types of roles.
+
+This is the role of a user, a customer, and a sponsor.
+
+The first role is that of a user.
+
+A user is simply a person who uses a service.
+
+The second role is that of a customer.
+
+A customer is a person
+
+who defines the requirements for a service
+
+and takes responsibility for the outcomes
+
+of service consumption.
+
+The third role is that of a sponsor.
+
+A sponsor is a person who authorizes the budget
+
+for service consumption.
+
+The term sponsor is also used in some organizations
+
+to describe an organization or department or an individual
+
+that provides financial or other support for an initiative.
+
+While these are the three roles,
+
+these roles could be fulfilled by different people,
+
+or all three of these roles could be fulfilled
+
+by the same person.
+
+Sometimes in business you get to act
+
+as one, two, or three of these roles,
+
+depending on the scenario.
+
+For example, you may define
+
+what is needed for your business team
+
+and you may have the authority to allocate
+
+and authorize the budget for those requirements,
+
+and you're going to be both the customer and sponsor
+
+in that case,
+
+but your team members are going to be the users
+
+'cause they're going to use what you buy.
+
+This is actually a great position to be in
+
+because the person authorizing the budget
+
+is also the person making the requirements decisions.
+
+And unfortunately, though,
+
+in a lot of large organizations,
+
+the person who authorizes the budget for an IT service
+
+is not a customer or a user of that service.
+
+And this type of disconnect can actually cause problems
+
+because the sponsor who funds the requirements
+
+and the customer who creates those requirements
+
+often have arguments over what those requirements should be,
+
+because the sponsor's focused
+
+on the efficiency and cost savings,
+
+whereas the customers are focused on the requirements,
+
+and the users are focused on the usability of this service.
+
+This can create a gap between the user
+
+and the customer's interest as well.
+
+As a service provider, it's our responsibility to recognize
+
+these three generic roles on a consumer side
+
+and to work with them appropriately
+
+to ensure the right service is being delivered
+
+and supplied to meet those needs.
+
+This means we need to ensure
+
+that the financials work for the sponsor,
+
+that the requirements are met for the customer,
+
+and the users get what they expect in usability
+
+of our service.
+
+At the end of the day, we want to achieve user satisfaction,
+
+customer satisfaction, and sponsor satisfaction,
+
+because when all three come together
+
+we're more likely to have repeat business
+
+from the consumer's organization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ITIL was first created around the idea of how to conduct
+
+service management within our organizations, so it should
+
+be no surprise that we have a specific definition
+
+of what is considered a service.
+
+According to ITIL Four, a service is a means of enabling
+
+value co-creation by facilitating outcomes that the customer
+
+wants to achieve, without that customer having to manage
+
+the specific costs and risks.
+
+Now, let's dig into this definition, one piece at a time.
+
+First, service is a means of enabling value co-creation.
+
+This portion of the definition is a reference back
+
+to how value is determined, as a result of the relationship
+
+between the provider of the service
+
+and the customer of the service.
+
+Next, the second portion of the definition says that
+
+this is done by facilitating outcomes
+
+that customers want to achieve.
+
+Again, this goes back to the concept of value.
+
+If I'm giving you something as a service provider
+
+that doesn't help you as the customer to achieve
+
+your objectives, well, then it doesn't have any value.
+
+After all, the service provider can't achieve
+
+your objectives for you.
+
+You have to achieve them yourself.
+
+The service provider is only able to facilitate
+
+the achievement of those customer outcomes.
+
+I can ensure your computer is up and able to run a program,
+
+but if you don't provide the necessary inputs
+
+to that program, you're going to be unable to get the necessary
+
+outputs and eventually the outcomes you desire.
+
+Now the final portion of the service definition states
+
+that this co-created value is created
+
+without the customer having to manage
+
+specific costs and risks.
+
+This refers to the whole reason why a customer hires
+
+a service provider in the first place.
+
+For example, I'm a customer of a web-hosting company
+
+that hosts all of my training videos, so my organization
+
+pays this web-hosting company a monthly fee
+
+for hosting terabytes of video files for us,
+
+and in exchange for that service,
+
+we pay them a nominal monthly fee.
+
+It's their job as the service provider to manage
+
+all the specific costs and risks associated
+
+with that service.
+
+For example, our contract allows for unlimited
+
+data storage on their servers, and unlimited bandwidth
+
+to be used without incurring any additional costs to us,
+
+under our contract, because we negotiated
+
+a fixed-fee contract.
+
+Now, my company employs a lot of very technical folks.
+
+I personally have been responsible for running
+
+hundreds of web servers, domain controllers, mail servers
+
+and file servers throughout my career.
+
+So why doesn't Dion Training maintain and host our own web
+
+servers to host all of our video training courses?
+
+Well, simply put, we don't want to have to deal
+
+with the costs and the risks of providing
+
+that particular service.
+
+It just isn't the business that we're in any more, right?
+
+Instead, we're focused on training.
+
+Our business is all about training,
+
+not running these large server farms.
+
+We don't want to have to deal with the patching, the updating,
+
+the backups, scaling up and scaling down, based on load
+
+demands, and all of that.
+
+Instead, for a negotiated flat fee, with our service
+
+provider, we can take all of those costs and risks
+
+from us, and we can simply pay our contracted rate,
+
+and the service provider gets to deal with it.
+
+This is exactly what the service definition
+
+is referring to.
+
+So, let's take a look at that service definition,
+
+on more time.
+
+A service is a means of enabling value co-creation
+
+by facilitating outcomes that customers want to achieve,
+
+without the customer having to manage
+
+specific costs and risks.
+
+So, in addition to services, a service organization
+
+can actually provide services based on products
+
+that they have, as well.
+
+Now, a product is a configuration of an organization's
+
+resources that's designed to offer value for a consumer.
+
+I like to think of this as the collection of services
+
+that we put together to give more value
+
+than they could individually.
+
+Now every organization works with a set of resources.
+
+These resources are either owned by the organizations,
+
+belong to the organization, or are managed
+
+by the organization.
+
+These resources may even be supporting services provided
+
+by the organization's suppliers and their partners.
+
+These resources can be leased, or rented.
+
+These resources could even be the people who work
+
+in an organization, under a contractual agreement,
+
+because these people are a resource
+
+to the organization, too.
+
+Now, the way an organization configures all those resources
+
+into an set offering is the essence of a product.
+
+For example, Amazon web services, or AWS, has a lot
+
+of different service offerings, including server hosting,
+
+under their EC2 brand, file storage, under S3,
+
+domain name server systems, under route 53,
+
+and many others, but these services,
+
+they aren't necessarily considered products.
+
+Now, if you compare these individual services
+
+with the Amazon Lightsail product, you can see
+
+how Amazon has combined their EC2, their S3,
+
+and their Route 53 services into a single product
+
+that can be sold directly to a customer
+
+in a defined configuration.
+
+Everything that makes up Lightsail is available
+
+as a service individually from AWS, but when combined
+
+under the Lightsail product, Amazon removed a lot of
+
+the complexity and confusion associated
+
+with that typical new customer's journey into the AWS,
+
+and into cloud computing.
+
+So I know we covered a lot in this lesson, but there's
+
+two key definitions that we covered that you need to know.
+
+First, is service.
+
+A service is a means of enabling value co-creation
+
+by facilitating outcomes that the customer wants to achieve,
+
+without the customer having to manage
+
+those specific costs and risks, and the second one
+
+is a product.
+
+A product is simply a configuration of an organization's
+
+resources designed to offer value for a consumer.
+
+Keep those two definitions in your head,
+
+because you're going to need them come test day.
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this lesson, I want to briefly consider
+
+the concept of a service offering.
+
+A service offering is a description
+
+of one or more services designed to address
+
+the needs of a target consumer group.
+
+In essence, a service provider
+
+is going to present their services
+
+to customers or consumers
+
+in the form of service offerings,
+
+which describes one or more of their services
+
+that are based on one or more of their products.
+
+Now, service offerings can include goods,
+
+access to resources, and service actions
+
+as part of that service offering.
+
+Let's take my own company
+
+as an example of a service provider.
+
+We have many different products
+
+that can help you when you're studying
+
+for your certification exams.
+
+We have courses on ITIL, Prince2,
+
+and numerous Comp TIA certifications.
+
+Each course contains a set of videos,
+
+that's one product.
+
+A practice exam or two, that's another product,
+
+and some amount of access to the instructor
+
+to ask questions, that will be a service.
+
+It shows you how we can group and sell
+
+those different products and services,
+
+multiple times in multiple different ways
+
+depending on the consumer we're trying to reach.
+
+You may have seen this with companies
+
+that offer things as a monthly service
+
+where different service offerings happen
+
+based on the different functionalities
+
+at the different price points.
+
+For example, I use Hulu at my home,
+
+which is a video on demand service.
+
+Hulu has a few different pricing tiers.
+
+The cheapest option is about eight dollars per month,
+
+and it gives you all the TV shows you want,
+
+but you have to watch commercials.
+
+Instead, we decided to opt the next higher price,
+
+which is going to allow us to pay 12 dollars per month,
+
+but it eliminates all of those commercials.
+
+Now Hulu even has added a third tier.
+
+They have a 40 dollar per month offering.
+
+And this gives you access to all the TV
+
+without commercials,
+
+but it also gives you access to live news,
+
+sports and other things in a cloud based DVR service.
+
+So as you moved up the pricing tier,
+
+you got additional services
+
+as part of that service offering.
+
+Now let's go back one more time
+
+to the definition of a service offering.
+
+If you remember, a service offering is a description
+
+of one or more services
+
+designed to address the needs
+
+of a target consumer group.
+
+Now remember, service offerings can include goods,
+
+access to resources, and service actions
+
+as part of that service offering too.
+
+So before we close out this lesson,
+
+we're going to quickly define these three items.
+
+First, we have goods.
+
+Goods are things that are supplied to the consumer.
+
+These are things that are transferred
+
+from the service provider to the consumer,
+
+and once that occurs, the consumer is now responsible
+
+for that future use.
+
+For example, if you went and signed up
+
+for a new service offerings
+
+from your local cell phone provider,
+
+they're going to give you a phone that you can use,
+
+but you're now responsible for that phone.
+
+If you break it,
+
+you're going to have to pay to get a new one.
+
+If you lose it and somebody makes
+
+a thousand dollars in long distance calls,
+
+well, you're going to be the one getting the bill.
+
+The goods, meaning the cell phone here
+
+were transferred from the service provider to you.
+
+And now you as the consumer are responsible for it.
+
+The second thing is service might offer
+
+is to provide access to resources.
+
+This means that access to resources is granted
+
+or a license is given to a consumer
+
+under some agreed terms and conditions.
+
+My website is a great example of this.
+
+You're given access to the videos, the practice exams,
+
+hands on labs, and all the other stuff
+
+that we have there.
+
+You're given a license to use them
+
+under the terms and conditions,
+
+that you agreed to when you signed up.
+
+These resources all remain under
+
+the service providers control
+
+and the service provider is responsible
+
+for ensuring that you can use them
+
+in the way that it was promised.
+
+Now here's where things
+
+get a little messy for consumers sometimes though.
+
+Sometimes you may not like the way the service provider
+
+is willing to let you use their service.
+
+For example, our website doesn't allow videos
+
+to be downloaded,
+
+because we're a subscription based service.
+
+We didn't transfer
+
+the ownership of that video to you.
+
+Instead, we're just giving you the access
+
+or a license to it.
+
+To use it and watch it as much as you want,
+
+as long as your subscription remains active.
+
+Now if you don't like those terms and conditions,
+
+you're going to have to find a different course
+
+or a different way to purchase that course
+
+that does allow you to have that one time payment.
+
+Where you can download it
+
+and use it as much as you want.
+
+But again, that's up to the relationship
+
+between you and your service provider.
+
+As a service provider, we control the resource
+
+and we're giving you access to it,
+
+under this service offering.
+
+Now, the third thing that might be a part
+
+of a service offering is a service action.
+
+This is an action of performed to address
+
+a consumers need.
+
+Let's use the example of a piece of software,
+
+that you might have a license for
+
+when you're building a website.
+
+For example, our website uses a piece of software
+
+as the basis of our learning management system.
+
+We paid for the software with a one time fee,
+
+and we were given rights to use it indefinitely,
+
+as much as we want
+
+without having to pay any recurring fees.
+
+Now, this falls under the goods category, right?
+
+Well, that part of it does,
+
+but for that one time fee,
+
+we're not going to get any support
+
+and we're not getting any updates, or patches.
+
+And if we want that technical support
+
+for the software,
+
+including the patches and the security updates,
+
+then we're going to have to pay for
+
+that part of the service offering,
+
+which is considered a service action.
+
+Because of this, we've opted to pay
+
+an annual fee to the company,
+
+and in return for that,
+
+we have 24 hour a day, seven days a week
+
+technical support access to their staff,
+
+and we can ask any questions we want.
+
+And we also get access to all the security updates
+
+and patches, as they're going to be released.
+
+So that's the difference between goods,
+
+access to resources, and service actions.
+
+Goods are going to be transferred over to the consumer.
+
+Access to the resources is going to let the consumer
+
+access them on the terms and conditions in the license
+
+that has been granted from the service provider.
+
+And service actions are going to be covering things
+
+that are going to be ongoing things,
+
+like technical support and customer service fees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Service relationships, this is what being
+
+a service provider is all about.
+
+To create value, an organization
+
+has to provide more than just a service.
+
+They have to work with their consumers and their customers
+
+to build an ongoing relationship.
+
+Now in the business world, just as in our love life,
+
+relationships are challenging and sometimes difficult.
+
+In this lesson, we're going to take a look
+
+at what a service relationship is
+
+and why it can be so complicated.
+
+First, let's cover the definition of a service relationship.
+
+A service relationship is a cooperation
+
+between a service provider and a service consumer
+
+that includes service provision, service consumption,
+
+and service relationship management.
+
+This is a fairly straightforward concept.
+
+Basically, it's when two organizations
+
+want to work together,
+
+they have a relationship that's formed.
+
+During this relationship, one of these organizations
+
+might assume the role of the service provider
+
+and the other becomes the consumer.
+
+Right now, you and I have a service relationship.
+
+I'm the service provider and you're the consumer
+
+of the training service that we're offering,
+
+but like I said, it can be
+
+much, much more complicated than that,
+
+but I'm getting a little ahead of myself here.
+
+Let's first talk about service provision.
+
+What is service provision?
+
+Well, service provision is the activities
+
+that are performed by an organization
+
+to provide the services.
+
+This includes things like managing
+
+the service provider's resources,
+
+configuring them to deliver the service,
+
+providing access to the resources to the users,
+
+and fulfilling the agreed-upon service actions
+
+as well as conducting service level management
+
+and even performing continual improvement to those services.
+
+Service provision can even include
+
+supplying goods to the consumer, as well.
+
+Now let's consider when you go and buy a new cellphone
+
+from your cellphone service provider.
+
+You walk into the store and they give you a phone,
+
+which is good, right, and they activate your phone
+
+by giving you a brand new phone number,
+
+and this is actually called account provisioning.
+
+This establishes your new user account,
+
+your new phone number, in this case,
+
+and they assign different features such as voicemail
+
+and text messaging and a data plan
+
+and other things to your account.
+
+By the time they're done, you can walk out of the store
+
+with your new phone, your new phone number,
+
+and working cellular service.
+
+That is all service provisioning by your service provider.
+
+Now when you walk out the door,
+
+you're going to use your new cellphone,
+
+and now you're going to become a consumer who's beginning to do
+
+what is known as service consumption.
+
+Service consumption includes all of the activities
+
+performed by an organization, or a single person,
+
+in the case of your new cellphone,
+
+and this is going to allow you to consume those new services.
+
+Service consumption includes things like the management
+
+of the consumer's resources that are needed
+
+to use the service, such as you paying your bill every month
+
+to make sure the service stays working,
+
+as well as all the other actions you perform to utilize
+
+the provider's resources, such as checking your email
+
+or making phone calls on your new smartphone,
+
+or it can even be requesting new service actions
+
+to be fulfilled.
+
+For example, you might be getting ready to fly
+
+from one country to another and you need
+
+your service provider to enable data roaming on your phone.
+
+This, again, is one of those things that can happen
+
+inside of service consumption.
+
+When the consumer is doing something,
+
+this is called service consumption.
+
+Now in addition to service provisioning
+
+and service consumption,
+
+there are some activities that are done
+
+by both the service provider and the service consumer,
+
+and when they do these things together,
+
+they're trying to enable value co-creation to occur
+
+based upon the agreed and available service offerings.
+
+This is known as service relationship management.
+
+The most basic of the things here are things
+
+like having the consumer paying their bill on time
+
+so their monthly subscription doesn't get canceled
+
+and the service doesn't get turned off.
+
+Or it may be that the service provider needs to ensure
+
+they're communicating with the consumer
+
+about a possible network outage that's going to occur
+
+because this weekend, there's going to be a server upgrade.
+
+This back and forth communication
+
+is what we call service relationship management.
+
+So now that we know a little bit
+
+about service relationships, including service provisioning,
+
+service consumption, and service relationship management,
+
+let's dig in to the complicated portion of this topic,
+
+the service relationship model.
+
+As I said, business can be complicated, and because of this,
+
+we have to consider the different relationships
+
+that are involved in any single service.
+
+For example, let's consider my website, diontraining.com.
+
+We offer training services over video to our students,
+
+students just like you.
+
+Now if you're watching this video on diontraining.com,
+
+that means there are a lot
+
+of different service relationships
+
+that have already occurred behind the scenes
+
+to enable that to happen.
+
+Let's place you in the Organization D spot
+
+here on the far right.
+
+Now you want to watch this video, but for that to happen,
+
+the video has to get to you.
+
+Well, that happens because you have a service relationship
+
+in place with our company.
+
+In this relationship, you are the consumer
+
+and we're the service provider, but to make this work,
+
+we rely on service providers, as well.
+
+We don't host our own videos, for example, but instead,
+
+we outsource that to a very large video streaming company
+
+with cloud servers all over the world to ensure
+
+that you get the best quality with the lowest latency.
+
+Let's put them up here as Organization B.
+
+Now in the relationship between Dion Training
+
+and the video streaming company, we are the consumer
+
+and the video streaming company is the service provider,
+
+but that video streaming service we use,
+
+they don't even own their own servers.
+
+No, instead they rely on Google Cloud, and that means
+
+the video streaming service is actually a consumer, too,
+
+while Google is going to be the service provider.
+
+But to make it even more complicated,
+
+there are departments inside of Google
+
+that work on IT systems, right?
+
+Well, some of those people are actually members
+
+of my website, and so when they're logged into my website
+
+to watch those videos, they're now going to be the consumers
+
+and I'm the service provider once more.
+
+You can see how this interrelationship
+
+can get really messy and really complicated.
+
+Organizations are going to be both a service provider
+
+to someone and a service consumer themself.
+
+If I was going to draw out every relationship
+
+for every service offering within my company,
+
+I would have to fill 100 or more of these screens
+
+because of all of the different relationships we have,
+
+and we're just a small company.
+
+If you think about how messy this would be
+
+for somebody like Facebook or LinkedIn
+
+or Microsoft or Google, it can just blow your mind.
+
+Your organization may be a service provider
+
+or a service consumer, or they can be both.
+
+It all depends on the scenario
+
+and the service relationships that are involved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Back when we discussed the definition of a service,
+
+we said that a service
+
+was a means of enabling value co-creation
+
+by facilitating outcomes that a customer wants to achieve,
+
+without the customer having to manage
+
+the specific costs and risks.
+
+Now in this lesson,
+
+we're going to dig into a single word from that definition;
+
+the word outcome.
+
+An outcome is a result for a stakeholder,
+
+enabled by one or more outputs.
+
+This is focused on the customer's desired outcome,
+
+not the service provider's though,
+
+and this is important to understand.
+
+Now outcomes are important to consider
+
+as part of the balancing act,
+
+between the supported outcomes, the removal of costs,
+
+and the removal of risks against unwanted,
+
+or undesirable outcomes, the costs, and the risk
+
+that could be introduced by the customer
+
+if they decide to instead,
+
+set up and manage their own resources.
+
+Now, let's consider an example
+
+of what we're really discussing here.
+
+In my local area,
+
+we have two major ride-sharing companies that operate.
+
+Now, I really like these ride-sharing services,
+
+especially when I'm traveling to a large downtown area
+
+for a conference or a convention,
+
+or when I need to get from the airport to my house,
+
+or something like that.
+
+Now, as a customer, I have a desired outcome.
+
+I want to get from point A to point B
+
+in the least amount of time, with a fair amount of cost.
+
+For example, the last trip I took to San Francisco,
+
+I didn't even need to rent a car,
+
+because I simply used Uber and Lyft
+
+to get from the airport to my hotel,
+
+and from my hotel to various locations around the city
+
+that I need to go to for my work.
+
+Now, this allowed me to get the outcome that I desired,
+
+which was getting from point A to point B
+
+in less time, and with less hassle.
+
+Now, because I used the Uber app,
+
+I was able to reduce my overall cost,
+
+because I didn't need to have a rental car.
+
+I didn't need to spend $75 per night
+
+to park that rental car at my hotel,
+
+and I didn't need to buy gas for that rental car.
+
+I didn't need to purchase insurance for the rental car.
+
+You're getting the idea here.
+
+I was able to remove a lot of the costs,
+
+because as a customer,
+
+I simply paid for the service every time I needed it,
+
+and I was able to achieve my desired outcome,
+
+getting from point A to point B.
+
+Now, if we consider the risks involved,
+
+I was able to reduce some of my risk as well.
+
+For example, I tend to find it very difficult
+
+to park in large cities,
+
+especially near the areas of town
+
+that I need to visit for a work trip.
+
+So, when I used Uber, I could eliminate the risk
+
+of not finding adequate parking,
+
+when I got to my desired location.
+
+Instead, I just get out of the car and I'm there.
+
+I also eliminated the risk
+
+of somebody stealing my rental car while it's parked,
+
+or breaking into it and stealing my luggage.
+
+All those type of things are eliminated,
+
+and it's no longer a risk for me.
+
+Now, conversely though, I need to balance this
+
+with the other side of the equation.
+
+There are certain costs and risks that I'm assuming,
+
+by choosing to use Uber or Lyft,
+
+instead of renting my own car.
+
+First, there's cost imposed upon me
+
+by the service provider.
+
+Beyond the actual service cost to get
+
+from point A to point B, there's also a requirement
+
+that I maintain a smart phone to run the app,
+
+and I have to ensure that I have a data plan
+
+on that smart phone,
+
+and I have to make sure that my smart phone
+
+has enough battery power.
+
+All of this are things that have to happen,
+
+so that I can connect the app from my phone
+
+to their central server,
+
+in order to order that Uber to my location
+
+and have them pick me up.
+
+Now, this goes back to our original point
+
+about value, right?
+
+Value is co-created,
+
+and a service is all about co-creating value
+
+by facilitating those outcomes
+
+that the customer wants to achieve
+
+without the customer having to manage
+
+the specific costs and risks of that service.
+
+So as a customer of this ride-sharing service,
+
+I need to co-create the value of the service
+
+by having a smart phone, and an active data plan,
+
+and enough battery power to run it.
+
+Now Uber, on the other hand,
+
+needs to ensure that all the other
+
+technical details of the service,
+
+are taken care of.
+
+They're going to provide the servers that enable the service.
+
+They're going to enable the technology,
+
+and the software code, and all of that other stuff.
+
+Now, I mentioned that the customer
+
+doesn't want to manage the specific costs and risks.
+
+What risks might there be with using an Uber
+
+instead of having your own rental car?
+
+Well, I've had an occasion or two
+
+where I've had to wait for my Uber to arrive
+
+because there's none in the area,
+
+and sometimes this will take me 10 or 15 minutes.
+
+Now, if I'm running a really tight schedule,
+
+there's a risk that I can miss my meeting.
+
+There's also a risk that a driver just isn't in the area
+
+when I need one.
+
+And so, if you happen to go to a city center
+
+where there's a lot of Ubers,
+
+and you travel to a location in the suburbs
+
+where there's not a lot of Ubers,
+
+well, this can become a problem,
+
+when you're tryin' to get a ride back to the city.
+
+This is a risk that you're going to assume.
+
+If you had a rental car, you wouldn't have this risk,
+
+'cause you could simply jump in the car,
+
+turn the key and start driving.
+
+Now, as we have these costs and risks
+
+that the service has now imposed upon me,
+
+as their customer, I now have to decide
+
+whether I should ultimately use their service,
+
+or say it's not worth the effort,
+
+and I'll simply rent a car and drive myself around.
+
+Now, this is the idea that we're all going to be thinking about
+
+when we think about a service,
+
+whether we're the one using the service,
+
+or the one providing the service.
+
+That decision is going to be based on value.
+
+All of this comes back to value.
+
+If the value is being co-created
+
+to achieve the supported outcomes,
+
+then the removal of the costs and the removal of risk
+
+has to be greater than the unintended consequences.
+
+And if that's true,
+
+the introduction of these new costs,
+
+or the introduction of new risks,
+
+has to be balanced and shifted
+
+in the favor of the consumer,
+
+if you want them to buy the service
+
+from the service provider.
+
+In this case, ordering an Uber or a Lyft
+
+instead of renting a car.
+
+It's all just about balancing this value, right?
+
+If we're the service provider
+
+or a service provider organization,
+
+like Uber in this case,
+
+we need to make sure that we're giving more value,
+
+and removing more costs and risks than we're introducing.
+
+And this way, the customer'll want to use it.
+
+Now in order for the customer to see the value
+
+that we're generating, this has to be true.
+
+It has to tip the scales towards the customer side.
+
+Now as a service provider,
+
+we want to make sure we're getting value in this, too.
+
+If we're the customer,
+
+we need to make sure that we're not creating
+
+additional costs or risks for ourself
+
+that outweigh the benefits of the service
+
+that we're going to consume.
+
+So, if I'm going to go ahead and outsource my servers,
+
+I want to make sure that it's cheaper for me to do that,
+
+and provides me more value for me to do that,
+
+than just to simply run the servers myself.
+
+Now each personal organization
+
+is going to weigh the value proposition,
+
+and they're going to determine if it makes sense for them.
+
+If it does, we're going to have a valid business agreement,
+
+and we're going to be able to go into business together.
+
+You're going to provide me a service,
+
+and I'm going to pay you to do that
+
+as the consumer or the customer.
+
+So, going back to my example of Uber or Lyft,
+
+I find it works great for me
+
+when I'm traveling in a big city,
+
+where the parking prices tend to be very high,
+
+the traffic tends to be heavy,
+
+and the number of drivers around is quite abundant,
+
+so it's easy for me to get a Lyft or an Uber
+
+when I need one.
+
+But, when I travel to more remote locations,
+
+I prefer to have my own rental car,
+
+because it solves the problem for me
+
+much more efficiently,
+
+because there's less risk of me not finding a parking space
+
+because parking is low-cost in those areas,
+
+and traffic is less of an issue,
+
+because I'm outside the city center.
+
+This is the whole idea of balancing
+
+those pros and those cons,
+
+so we can make the idea,
+
+and figure out what gives us the most value.
+
+
+
+
+
+
+
+
+
+
+In this lesson, we're going to discuss costs.
+
+Now, the cost of something is the amount of money
+
+that spent on a particular activity or
+
+a particular resource.
+
+While cost is usually expressed financially,
+
+it can also be expressed in nonfinancial ways too.
+
+For example, when we create a new course here,
+
+we actually measure the cost of the course
+
+in the number of hours spent creating it.
+
+A typical course, like this one,
+
+might require 400 or 500 hours worth of effort
+
+across our entire staff.
+
+This usually is described in either the measurement
+
+of man hours, or FTE.
+
+Man hours are also known as person hours,
+
+because we want to be equal opportunist here.
+
+FTEs, on the other hand,
+
+stands for Full Time Equivalent.
+
+And it's used to measure things based on a single
+
+employee, who works 40 hours per week,
+
+for an entire year.
+
+This equates to roughly 2,000 hours worth of work.
+
+So, if we need to run a web server
+
+to host all of our courses,
+
+that might require half of an FTE.
+
+Or one-half of a person's annual available work hours
+
+for the entire year.
+
+This describes the number of FTEs, or
+
+Full Time Equivalent employees that are required
+
+in order to undertake a particular activity.
+
+Now, while I can measure things from a an hours
+
+of effort perspective,
+
+this does ultimately translate back to financial cost.
+
+Each team member on my team earns a salary.
+
+And if it takes somebody half of their entire year
+
+to run that web server,
+
+that means half of their salary is tied up
+
+in keeping that web server up and running.
+
+So, it does end up going back to cost eventually.
+
+But, when we look at our reports,
+
+we're actually more concerned with the amount
+
+of time things take, than the amount of money
+
+we spend on 'em.
+
+Now, depending on your organization,
+
+you may choose to measure things based
+
+on the man hours, the person hours, the FTEs,
+
+or using actual dollar and cents that are expended.
+
+Either way, the service provider is aiming
+
+to reduce or remove costs,
+
+when they provide a service.
+
+So, if a service provider can save you more money
+
+than their service is going to cost you,
+
+you're certainly going to look at using
+
+that service, right?
+
+I know I would.
+
+For example,
+
+my internet service provider has varying speeds available,
+
+that we can choose to use here at our office.
+
+We can choose to spend $50 per month for 100 megabit
+
+per second connection.
+
+Or, $100 a month for a 1,000 megabit per
+
+second connection.
+
+Which one should we choose?
+
+Well, in our case, we upload a lot of large files,
+
+because of all the videos that we produce.
+
+And when we looked at the speed that we
+
+were going to purchase,
+
+we decided that paying twice as much money per month,
+
+for a ten-times increase in speed, was well worth it.
+
+Because it saves our staff a lot of time
+
+uploading those files.
+
+So, it became an easy decision.
+
+Because spending $50 more per month on the
+
+faster internet connection,
+
+made my staff much more productive.
+
+And it saved us a lot of wasted labor hours.
+
+And this more than made up for the additional cost
+
+in the labor savings that we were able to get.
+
+That's the idea when you look at costs.
+
+If you're going to outsource a service,
+
+or you're going to pay for something,
+
+you want to make sure it's giving you more value
+
+than what it's costing you.
+
+In our case, spending twice as much on internet,
+
+gave us 10 times more value.
+
+And so it was definitely worth doing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+At this point in the course,
+
+we've already mentioned the word risk a few times,
+
+but I wanted to dive into it
+
+in a little bit more detail in this lesson.
+
+Risk refers to a possible event that could cause
+
+harm, loss, or make it more difficult
+
+to achieve your objectives.
+
+Essentially, it's any possible event that could impact
+
+our ability to co-create that value through our services.
+
+Generally, when most people think of risk
+
+and service management, they think about it
+
+from a new insallation or a project perspective.
+
+But risk is also present in the form of our services too.
+
+From a service provider perspective, our goal is to
+
+minimize risk for our customers who use our services.
+
+In this way, risks are similar to costs.
+
+But just like costs, our customers will assume
+
+that some new risk is going to occur
+
+as part of their consumption of our services.
+
+For example, if we go back to my Uber example
+
+where I was a customer using the app
+
+to get rides all over San Francisco,
+
+I removed the risk of not finding a parking space
+
+for my rental car since the service removed my need
+
+for me to have my own rental car in the first place.
+
+However, I now run the risk of not being able
+
+to call an Uber if the app malfunctions.
+
+Or, what if I'm in an area where
+
+there's no cellular service?
+
+Or, what if my phone battery dies?
+
+All of these are new risks that are introduced
+
+into my desired outcome of traveling around San Francisco.
+
+Now as a consumer of the service, I can also contribute
+
+to reducing the risk by taking some mitigating actions.
+
+For example, I can carry around
+
+a spare battery pack with me.
+
+By doing this as a consumer, I am reducing
+
+the risk that I won't be able to call for an Uber
+
+when I need one because of my battery dying.
+
+At the same time, I might also communicate
+
+to Uber that I'm finding it difficult
+
+to use their service in more rural areas.
+
+Maybe when I'm outside the city,
+
+I'm not getting enough Uber drivers in that area.
+
+By more clearly articulating my needs and my requirements,
+
+then the service provider can determine
+
+if they're able to better meet them.
+
+Maybe Uber is going to decide that they're going to pay a premium
+
+or a bonus to their drivers who will work
+
+in those more rural areas outside the city center.
+
+That might increase the number of drivers on those streets
+
+and make it easier for customers to get a ride.
+
+Now as a consumer, it's up to me to
+
+clearly communicate my needs to that service provider
+
+and to clarify the outcomes that I want to achieve.
+
+I also need to make sure I'm communicating any constraints
+
+or critical success factors
+
+that I may have for that service.
+
+This means I'm putting requirements
+
+on that service provider, right?
+
+Well, guess what?
+
+This service provider may also
+
+put requirements on me as a customer too.
+
+In the example of Uber, they require me
+
+to have a cell phone, a valid data plan,
+
+and the ability to send my GPS location to their drivers
+
+by using the location tracking feature on my phone.
+
+This is a two way street after all.
+
+We're both working to co-create
+
+the value and reduce the overall risk.
+
+Now, since risk is a possible event that could cause harm
+
+or make it more difficult for us to achieve our objectives,
+
+we can do some things to mitigate that risk.
+
+Well, what are those things that we can do?
+
+There's actually 4 things we can do with risk.
+
+We can avoid risk, we can accept risk,
+
+we can transfer risk, or we can mitigate risk.
+
+Now, when we avoid risk, we're aiming
+
+to actually remove it completely from the service.
+
+Now, in reality, we can't remove all the risk for a service
+
+because risk is something that's inherent in everything
+
+that a business does to some level in some degree.
+
+But, there are certain risks that we can avoid completely.
+
+For example, let's say that you're running a service
+
+that allows people to read your blog.
+
+Maybe you're worried about the new privacy regulations
+
+and don't want to have to worry about maintaining
+
+all of the blog reader's information securely
+
+and properly under the new GDPR provisions.
+
+Well, you could avoid those issues completely
+
+if you turn off tracking on your reader's information
+
+by disabling any cookies, and you can also remove any
+
+requests for their email addresses
+
+and other things like that.
+
+If you're not collecting their information, you no longer
+
+have to protect that information.
+
+Now, this may not be the best business decision, right
+
+because most businesses want to be able to track
+
+their customers and contact them by email with offers.
+
+So, while you can avoid this whole situation,
+
+it's probably better if we found
+
+a better way to handle this risk.
+
+And that brings us to simply accepting the risk.
+
+With this option, you look at the cost of protecting
+
+against the risk and you look at the possible bad outcomes
+
+and determine that it's simply cheaper to pay
+
+to accept the risk and pay up if you're going to get caught.
+
+Now, going back to our privacy example, I have a friend
+
+who is in an Australian based company,
+
+which is outside of the European Union.
+
+Because of this, he's taken the position that
+
+he's not worried about complying with the GDPR policies
+
+because he's an Australian living in Australia
+
+and he has an Australian company.
+
+He isn't actively targeting European customers,
+
+but if they happen to go to his site, too bad.
+
+He's calculated the risk and he believes the risk
+
+is low that the EU is going to try to fine him
+
+or even collect if they do.
+
+So he's taken no actions in regard
+
+to changing the way his website works
+
+or the way his business works.
+
+He's going to do it the exact same way he did before GDPR
+
+to the way it is after GDPR.
+
+Now, this is called risk acceptance.
+
+Now, the next thing we could do is we can
+
+instead decide to transfer the risk.
+
+Maybe you don't want to be responsible for collecting
+
+and storing all this private information,
+
+but you still want access to that data.
+
+Well, in that case you can hire
+
+a service provider to collect it for you,
+
+to store it securely, and to give you access.
+
+This would be a form of risk transfer.
+
+Another option might be that you take the approach
+
+that my Australian friend did and he simply is going to
+
+pay some insurance in case you get sued or fined.
+
+This transfers the risk to the insurance company
+
+because you paid them a monthly premium
+
+to take that risk on for you.
+
+Our final option with risk is what's most commonly used.
+
+It's known as risk mitigation.
+
+With risk mitigation, we put in place some actions to
+
+reduce the risk even if it doesn't eliminate it completely.
+
+In our privacy data example, we may add
+
+new technology systems that are going to better protect
+
+the data and implement new processes
+
+in the way that we handle the data.
+
+This will help us reduce the risk and
+
+hopefully make the information much more secure,
+
+which is one of the intended outcomes of GDPR anyway.
+
+But, a hacker can still break into our network
+
+and steal all of the customers' data.
+
+If this happens, we might have reduced the risk
+
+but we didn't eliminate the risk.
+
+That's the idea of risk mitigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Utility and warranty are two terms
+
+that every ITIL student simply has to know.
+
+They're going to come up to time and time again
+
+throughout your training and in the real world.
+
+Utility refers to the functionality offered by a
+
+particular product and service to meet a particular need.
+
+This really is what the product or service does.
+
+Utility is what we refer to as fit for purpose.
+
+Now, let's take a look at warranty for a moment
+
+and then we're going to compare and contrast these two terms.
+
+Warranty is the assurance that the product or service
+
+will meet the agreed upon requirements.
+
+It is how a service performs.
+
+Warranty is concerned with the service's ability
+
+to accomplish what it needs to do.
+
+This is often referred to as fit for use.
+
+Now, to compare and contrast these two terms,
+
+let's use the example of a car.
+
+As a consumer, you have a requirement
+
+to drive a car from point A to point B.
+
+You want it to get at least
+
+35 miles per gallon of fuel efficiency
+
+and you live somewhere that gets really hot in the summer
+
+and really cold in the winter,
+
+so you want a good, cold air conditioning system
+
+and a really nice, warm heater.
+
+Now, let's consider these requirements
+
+and determine if it meets our utility standard.
+
+Remember, utility is about something being fit for purpose
+
+and if I have a small family,
+
+I may be able to fit my wife and my two kids
+
+in a four-door sedan like a Toyota Prius.
+
+So, to carry the family from point A to point B,
+
+the Prius would be fit for purpose
+
+and it would meet my utility functions.
+
+In addition to this, if I bought a brand new Prius,
+
+it would certainly have high enough fuel efficiency
+
+and have a really nice air conditioner and heating system,
+
+so it's going to meet my warranty requirements as well.
+
+Remember, warranty is all about fit for use.
+
+Does it meet the requirements stated by the consumer?
+
+So, since I'm the consumer, I'm going to say that
+
+it had to have at least 35 miles a gallon of fuel efficiency
+
+and a working air conditioner and heater
+
+and this brand new Prius will
+
+certainly meet those requirements.
+
+This means it's deemed fit for use.
+
+Now, let's say that I bought the car,
+
+a few years go by, and my wife has another child.
+
+Uh oh, we already had two kids,
+
+so this little Prius isn't going to be very good
+
+for carrying my entire family around anymore.
+
+It no longer is going to be fit for purpose
+
+because any time I want to go out to dinner as a family,
+
+we're now going to have to take two cars
+
+because we all can't fit into the little Prius.
+
+The warranty might still be there because
+
+the air conditioner still works and the heater still works
+
+and it still gets over 35 miles per gallon,
+
+but the intended purpose of getting us all
+
+from point A to point B simply can't be accomplished.
+
+There's not enough seats and not enough seat belts.
+
+And since utility is concerned with fit for purpose,
+
+this Prius is no longer meeting my utility needs.
+
+So, hopefully this little example helps you
+
+understand the difference between utility and warranty,
+
+that what a service does is utility,
+
+that's driving from point A to point B.
+
+On the other hand, how the service does it
+
+needs to be considered as part of warranty,
+
+that's getting 35 miles per gallon
+
+and keeping the inside of the car at the right temperature,
+
+not too hot and not too cold.
+
+Now, one of the important things to remember
+
+is that you need both utility and warranty
+
+for a service to operate successfully.
+
+In the IT world, we often see people focus on the warranty
+
+and they simply forget about utility.
+
+If I have a service that runs on
+
+a wonderful Elastic Cloud Infrastructure that can handle
+
+million of users simultaneously, that is warranty.
+
+IT people like warranty because it's easy to measure.
+
+If you require that a service has
+
+a defined and agreed upon condition
+
+and you meet those conditions, you have good warranty.
+
+Utility simply requires that a service
+
+support the performance of the consumer
+
+or they remove constraints from that consumer.
+
+So, if the service can be used effectively by the users
+
+to share their latest social media posts, for example,
+
+that would be considered utility.
+
+If the service is always up, meaning it has great warranty,
+
+but it doesn't perform the service
+
+that the customer wants it to do,
+
+meaning it hasn't gotten good utility,
+
+then the service is simply going to end up failing.
+
+You can't run a successful service
+
+without both utility and warranty.
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this section of the course,
+
+we're going to discuss
+
+the four dimensions of service management.
+
+Now when we talk about the four dimensions
+
+of IT service management,
+
+what we're really talking about
+
+is four different perspectives.
+
+So if I have in the center
+
+the value that I'm trying to co-create,
+
+I do that by using different products and services
+
+that I deliver as a service provider
+
+to my consumer or my customer.
+
+Now, the consumer and customer has this
+
+product that they want to get value from, right?
+
+And that means that we have to deliver
+
+that product or service.
+
+Now when I go to create a product or service,
+
+I look at it form four different perspectives.
+
+And these four perspectives are what we call
+
+the four dimensions of IT service management.
+
+The first one is the organizations and people.
+
+The second is information and technology.
+
+The third is the partners and suppliers.
+
+And the fourth is the value streams and processes.
+
+And all around that, I have these external factors
+
+you can see around the side
+
+that are going to impact the service and products
+
+that we're creating as well.
+
+Well, let's consider the process of incident management.
+
+How are we going to deal with incident management
+
+when something happens to our service or our product?
+
+Well, if we look at it through
+
+the organizations and people lens, or that dimension,
+
+we're going to ask the question
+
+of how we're going to organize our teams.
+
+Is it something the service desk is going to handle?
+
+Are we going to have different tiers,
+
+like tier one, tier two, tier three support?
+
+Or are we going to have a flat organization?
+
+These are all the things we have to figure out.
+
+How are we going to organize our communications?
+
+How is that tier one representative
+
+going to transfer the information they collected
+
+to the tier two representative,
+
+if you're going to use a tiered or vertical organization.
+
+How are you going to escalate it up to the next level?
+
+At which trip points?
+
+Well how about the people you need?
+
+How are you going to decide how many people you need
+
+to run the incident management
+
+for a particular service?
+
+What competencies do they need?
+
+Is this service going to be something that uses AWS,
+
+so you need Amazon Web Service certified people?
+
+Or is this going to be something
+
+where we're going to use local services?
+
+How about the qualifications?
+
+How about the way they're going to interact?
+
+How are you going to motivate the people?
+
+How are you going to hire the right people?
+
+How are you going to keep the right people?
+
+How are you going to pay them?
+
+And how are you going to make sure that they're capable
+
+of doing the incident management
+
+that you want them to do?
+
+All of these are things you have to think about
+
+from the organizations and people lens
+
+or perspective or dimension.
+
+Now when I look at it from
+
+the information and technology side,
+
+let's think about it from the process standpoint.
+
+How am I going to register the incident?
+
+Am I writing it down on a piece of paper,
+
+am I putting it in an internet portal,
+
+am I using a certain piece of
+
+software or hardware to do that?
+
+How about the relationships between incidents?
+
+How do I know that this incident with this printer
+
+that happened today
+
+is related or not related
+
+to the one that happened three weeks ago?
+
+Well, maybe I have some kind of technology
+
+or information management software
+
+that does that for me.
+
+That can track the incidents and the problems.
+
+Or the incidents and the particular configuration item,
+
+meaning that printer.
+
+Or the incidents and the different users
+
+who are being affected.
+
+Maybe when we get all these calls and we put them together,
+
+we find that all of the users affected
+
+all reside in building one,
+
+and not in building two.
+
+So maybe it's a problem with building one.
+
+And so we can look into that, right?
+
+How about incident management tools
+
+for information flow?
+
+How are we going to do work flow?
+
+How are we to use knowledge bases?
+
+How about diagnostic tools?
+
+How are we going to detect these events
+
+and process these events?
+
+How are we going to communicate with each other?
+
+How are we going to organize and share data?
+
+All of this is stuff that goes under that information part
+
+of the information and technology portion of this dimension.
+
+Then we get to our third dimension,
+
+and we start looking at our partners and suppliers, right?
+
+Because nobody is self sufficient.
+
+We talked about this before.
+
+Maybe this printer is broken because
+
+it ran out of supplies.
+
+There's no more paper, there's no more toner, right?
+
+So those are things we'd have to think about.
+
+We think about partners and suppliers.
+
+We have to think about the external teams
+
+that are going to contribute to the success of our service.
+
+Maybe in this case, we have outsourced completely
+
+the management of the printers,
+
+and that company isn't doing a good job,
+
+and so we need to evaluate their contract.
+
+If we outsource a service,
+
+how are we going to escalate incidents to them
+
+once something is broken.
+
+Or maybe we escalate top tier service.
+
+So we handle minor incidents in house,
+
+but we're going to outsource those major incidents,
+
+and so we have to escalate it to them.
+
+How do we get information back from them
+
+when they fix something, right?
+
+Two way street between partners and suppliers and us.
+
+All of this is things that we have to think about
+
+when we start considering how we're going to operate
+
+with our partners and our suppliers, right?
+
+And then we have our final dimension to look at,
+
+which is going to be our value stream and our processes.
+
+Maybe we look at that value stream
+
+and see that this whole process of printing
+
+actually has issues with it,
+
+because it's not optimized properly.
+
+There's too much waste in it.
+
+Maybe we've looked at it and we said,
+
+you know what, we can take out step number two,
+
+and just make it step one, three, and four,
+
+and that will solve the problem.
+
+All those things are things that we would evaluate
+
+as we look at it from the four dimensions.
+
+And then finally,
+
+we might want to look at it
+
+from those external perspectives.
+
+One of those, the E, stood for environmental.
+
+Maybe we have somebody who doesn't like the fact
+
+that we're printing and wasting a bunch of trees
+
+by printing out a lot of stuff.
+
+And so somebody might have jammed the printer on purpose
+
+to break it, because they are an environmentalist, right?
+
+That's kind of crazy, but you kind of get the idea
+
+of what I'm talking about.
+
+We can start thinking about
+
+all of these four dimensions,
+
+and these external factors,
+
+and how they're going to affect a simple service,
+
+something like printing,
+
+or something like an incident management.
+
+And as we look at this, that's how all of this
+
+ends up tying together.
+
+And that's the whole idea of using these four dimensions
+
+when you're thinking about your processes,
+
+your people, your organization,
+
+your technology, your information,
+
+all of that stuff, so that you can make sure
+
+that your products and services
+
+are delivering the value they're supposed to.
+
+
+
+
+
+
+
+
+
+
+So let's start with what is the service value system?
+
+Well, the service value system, or the SVS,
+
+is going to describe how all of the components
+
+and activities of your organization work together
+
+as a system to enable value co-creation.
+
+Now, these components and activities
+
+are all tied together within the organization's resources,
+
+and they can be configured and reconfigured
+
+in multiple different combinations
+
+in this flexible way based on the circumstances.
+
+Now, this is going to require some integration
+
+and coordination of all of the different activities
+
+and practices and teams within the organization,
+
+as well as different authorities and responsibilities
+
+for this to truly be effective.
+
+Some organizations are much more flexible than others.
+
+Some are very tight and stringent in their ways.
+
+But depending on your organization and its culture,
+
+you're going to be able to utilize this service value system
+
+in a very rigid or very flexible manner.
+
+It just depends on your organization
+
+and how you implement it.
+
+Now, the purpose of this service value system
+
+is to ensure that your organization
+
+is continually co-creating value
+
+with all of your stakeholders
+
+through the use and management of the products
+
+and services that you have within your organization.
+
+Now, when we look at this service value system,
+
+it's made up of three basic blocks that we're going to see.
+
+You'll see on the left side, we have opportunity and demand.
+
+That's our input.
+
+We have on the right side value.
+
+That's our output.
+
+And then we have all this stuff in the middle.
+
+In the middle we have the service value chain.
+
+Around that service value chain, we also have governance
+
+and practices because there are 34 different practices
+
+inside of ITIL 4 that we're going to cover.
+
+And then we have governance,
+
+which is the way the organization is run.
+
+And then, we have the guiding principles
+
+and continual improvement.
+
+
+
+
+
+
+
+
+
+
+The Guiding Principles.
+
+We're going to take a look at the seven guiding principles
+
+in ITIL 4.
+
+A guiding principle is a recommendation
+
+that's going to guide an organization in all circumstances.
+
+That's right, guiding principles can be used
+
+to guide an organization in their work
+
+as they adopt a service management approach
+
+and adapt ITIL guidance
+
+to their own specific needs and circumstances.
+
+This means that all organizations
+
+are going to integrate the use of multiple different methods
+
+into their overall approach to service management.
+
+The way you do service management
+
+and the way I do service management might be different,
+
+but we both should be based on the same guiding principles
+
+because these are guiding principles are applied universally
+
+to every initiative out there.
+
+Now when we talk about applying those guiding principles,
+
+these guiding principles are going to help us
+
+to encourage and support our organizations
+
+in their continual improvement
+
+across all levels of the organization.
+
+These, as I said, are applied universally
+
+to all of the initiatives,
+
+but also to all of the relationships
+
+with your different stakeholder groups.
+
+So as we talk about the consumers and the customers
+
+and the stakeholders across the organization,
+
+all of these people need to be considered
+
+when you're thinking about these guiding principles.
+
+For example, the first guiding principle is known as
+
+focus on value.
+
+Now with focus on value, it can and should be applied
+
+to all of your relevant stakeholders
+
+and respective definitions of value.
+
+We're not going to just consider the value for the consumer,
+
+but we also want to look at it
+
+from the value for the customer.
+
+We want to look at it for the value for the service provider.
+
+All of those different people and stakeholders
+
+need to be getting value
+
+from whatever the service is we're doing
+
+and so that's the way that we look at this stuff for example
+
+as we're looking at the focus on value principle.
+
+Now as an organization,
+
+I'm not going to use just one or two of these principles,
+
+but I should consider all seven of them
+
+and determine which ones are relevant for each situation
+
+and how I should apply them.
+
+Not all of the principles
+
+are going to be critical in every situation,
+
+but you're probably going to find that five or six
+
+or even seven of them may apply to your initiative
+
+and so you want to think through each of them
+
+kind of like a checklist
+
+to make sure you're thinking about your service
+
+in a holistic way.
+
+As you do this and you review each of them,
+
+you have a way to determine
+
+whether or not they're appropriate for your service
+
+and should it be applied.
+
+Now I mentioned a lot about these guiding principles so far,
+
+but I haven't even told you what they are.
+
+The first is focus on value.
+
+The second is start where you are.
+
+The third is progress iteratively and with feedback.
+
+The fourth is to collaborate and promote visibility.
+
+The fifth is to think and work holistically.
+
+The sixth is to keep it simple and practical
+
+and finally our seventh one is to optimize and automate.
+
+
+
+
+
+
+
+
+So back when we talked about the service value system,
+
+we had one inside block that showed us
+
+the service value chain.
+
+Well, we're going to break that block open
+
+and look at all of those different pieces.
+
+As you can see here, we have things like engage,
+
+plan, improve, design and transition, obtain and build,
+
+deliver and support, and products and services,
+
+and all of those are going to work together
+
+as part of this service value chain.
+
+Now, there's a couple of important things to know
+
+when we look at a diagram like this.
+
+This is not shown to introduce a linear sequence of events.
+
+If you happen to be familiar with ITIL v3
+
+or the older version of ITIL,
+
+we had what we called the service lifecycle
+
+and it was a sequence of actions in a linear format.
+
+So, we would start with a strategy and then move to design
+
+and then move to transition and then move to operations
+
+and then we would move to continual service improvement,
+
+and we worked through those five life cycles.
+
+Here, in ITIL 4, we don't do that anymore.
+
+This is not a linear sequence, instead,
+
+we normally are going to start with engage
+
+but we don't always have to
+
+and based on that, we're then going to
+
+touch into other areas of that interial cube.
+
+And as we look at that central cube
+
+with the activities in there, we have three major groups.
+
+We have design and transition,
+
+obtain and build, and deliver and support.
+
+These are what are referred to as the central activities
+
+inside the service value chain
+
+and these can interact in any order between each other
+
+and with the other activities, as well.
+
+Another important thing to note,
+
+is this overlap that exists between improve
+
+and the other area of the service value chain.
+
+You'll notice that improve is shown
+
+in the lower half of this diagram
+
+and there's this overlap of this purple band
+
+that goes from improve to improve and engage.
+
+You have improve to the activities inside the central cube,
+
+such as the deliver and support,
+
+the design and transition, or the obtain and build.
+
+We have improve in the products and services.
+
+All of these are here to show us that feedback loop
+
+that exists between each part of the service value chain,
+
+as it moves through the improvement cycle
+
+and the continual service improvement.
+
+Now, you also need to understand
+
+and manage the perceived value of this service value chain
+
+because it's going to drive the demand for the next order,
+
+the next product, the next service,
+
+or the next iteration of your service relationship.
+
+Now, the reason why we call this a service value chain
+
+is because all these actions are linked together,
+
+so there's a lot of interactions that occur
+
+between these different practices.
+
+This service value chain activities are going to represent
+
+all of the different steps that the organizations going to take
+
+in the creation or co-creation of value.
+
+Each activity is going to contribute to the value chain
+
+by transforming the specific inputs into desired outputs,
+
+and so as we take things from demand and opportunity,
+
+it goes through that service value chain,
+
+getting additional value added
+
+and coming out the other side as the value
+
+and the desired outcome that we want for our services.
+
+That's the way that we're going to be looking at all this.
+
+And so, to convert theses inputs into outputs,
+
+these value chain activities
+
+are going to use different combinations
+
+of the 34 ITIL practices that we're going to discuss
+
+throughout the remainder of this course.
+
+Each activity can draw upon internal
+
+or third party resources,
+
+they can look at different processes,
+
+different skills and competencies,
+
+from one or more of these 34 practices.
+
+They don't have to be done individually,
+
+they can be combined together, too,
+
+and that's the whole idea here,
+
+as we start getting these inner relationships
+
+through the service value chain activities.
+
+All of the incoming and outgoing interactions
+
+with all the different parties
+
+that are external to your service provider
+
+are all performed through the engage value chain activity.
+
+That's why it's one of those first ones
+
+that normally occurs.
+
+Anytime you want a new resource,
+
+that's going to be obtained through
+
+the obtain and build activity.
+
+Anytime you want to plan something,
+
+any planning is going to occur through the plan activity.
+
+When you're trying to improve things,
+
+that's going to happen through the improve activity.
+
+You're kind of getting the idea here, right.
+
+All of the different things that we do,
+
+are going to be binned into one or more
+
+of these different buckets.
+
+As we create and modify and deliver and maintain and support
+
+a component, a product, or a service,
+
+all that's going to happen inside that central cube,
+
+between design and transition,
+
+obtain and build, and delivery and support.
+
+As we look at our products and services,
+
+our demand and our value,
+
+these are not considered value chain activities, right.
+
+Those go back to our service value system.
+
+Those are our inputs and our outputs,
+
+so the inside is what we're really looking at here.
+
+That's engage, plan, improve, obtain/build,
+
+delivery and support, and design and transition
+
+as we move forward.
+
+
+
+
+
+
+
+
+
+
+
+Continual improvement.
+
+So we've spent a lot of time going through each
+
+of the pieces of the service value system.
+
+In the last section, we covered the middle block,
+
+which was the service value chain.
+
+Now we're going to move to the lowest block,
+
+which is continual improvement.
+
+You'll notice here that it is called out
+
+in this purple block.
+
+Now right above continual improvement,
+
+there's a block called practices,
+
+and practices are going to be the 34 distinct ITIL practices
+
+that we're going to cover throughout the course.
+
+And oddly enough, continual improvement is one
+
+of those 34.
+
+So why is continual improvement pulled out
+
+in the diagram as its own activity shown here,
+
+in addition to the fact that it's a practice?
+
+Well it's because continual improvement is that important.
+
+In everything we do, we should always be trying it improve.
+
+So what is that definition?
+
+Well, the purpose of the continual improvement practice
+
+is to align the organization's practices
+
+and services with changing business needs
+
+through the ongoing identification and improvement
+
+of services, service components,
+
+practices, or elements that are involved
+
+in the efficient and effective management
+
+of products and services.
+
+Now the continual improvement model is a seven-step
+
+methodology that provides us a framework
+
+of how we should do improvement operations
+
+within our organizations.
+
+So what is this model?
+
+Well, it all starts out with step number one,
+
+what is the vision?
+
+Then we move into step two:
+
+Where are we now?
+
+Step three, where do we want to be?
+
+Step four, how do we get there?
+
+Step five, take action.
+
+Step six, did we get there?
+
+Step seven, how do we keep this momentum going?
+
+And then we restart it all again,
+
+because continual improvement is an ongoing process
+
+that never stops.
+
+We're going to continually go, time and time again,
+
+until we get the best product we ever can have.
+
+And guess what?
+
+We're never going to reach perfection.
+
+There's always new features.
+
+There's always better ways of doing something,
+
+and so by doing this continual improvement
+
+we're constantly tryna get better,
+
+and better, and better to get to that ultimate vision,
+
+that nirvana, if you will,
+
+but we're never quite going to reach it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this lesson,
+
+we're going to quickly cover
+
+the 34 practices in the ITIL 4 framework.
+
+But before we jump in to these 34 practices,
+
+we should really talk about what exactly is a practice?
+
+You may remember from our service value system lesson
+
+that there was a portion of the diagram
+
+that called out these practices.
+
+Well, a practice is a set of organized resources designed
+
+for performing work or accomplishing an objective.
+
+Now, each practice is going to support
+
+multiple service value chain activities
+
+and include some resources based on the four dimensions
+
+of IT service management.
+
+Now, the 34 individual practices in ITIL 4
+
+are divided up into three main categories.
+
+We have general management practices,
+
+service management practices,
+
+and technical management practices.
+
+The first category is the general management category.
+
+This category has 14 of the 34 ITIL practices.
+
+General management practices contain the practices
+
+that service management teams
+
+or service management organizations have adopted
+
+from the wider business domain.
+
+This includes things like architecture management,
+
+continual improvement, information security management,
+
+knowledge management, measurement and reporting,
+
+organizational change management, portfolio management,
+
+project management, relationship management,
+
+risk management, service financial management,
+
+strategy management, supplier management,
+
+and workforce and talent management.
+
+Now, all of these general management principles
+
+have been adopted and adapted for service management
+
+for more generalized business management domains,
+
+just like I said before.
+
+For example, project management and portfolio management
+
+are not something that only occur within the IT world.
+
+We use these across all of our business lines
+
+and across all of our organizations,
+
+and this is why these
+
+are considered general business management domains.
+
+The second category is service management practices.
+
+This category has 17 of the 34 ITIL practices.
+
+Service management practices are those
+
+which the service management organization
+
+has created for themselves
+
+or they've adopted from other guidance
+
+from within the service management industry.
+
+These include things like availability management,
+
+business analysis, capacity and performance management,
+
+change enablement, incident management, IT asset management,
+
+monitoring and event management, problem management,
+
+release management, service catalog management,
+
+service configuration management,
+
+service continuity management, service design,
+
+the service desk, service level management,
+
+service request management practices,
+
+and service validation and testing.
+
+Now, the third category
+
+is our technical management practices.
+
+This category only has three of the 34 ITIL practices.
+
+Technology management practices
+
+are those technical functions which have been elevated
+
+to the level of a service.
+
+This includes the deployment management,
+
+infrastructure and platform management,
+
+and software development and management practices.
+
+Now, in this lesson,
+
+I have just listed out the 34 practices
+
+and which categories they belong to.
+
+Going into each one specifically
+
+is beyond the scope of this particular introductory course.
+
+But if you want to learn about
+
+each of these practices in detail,
+
+I highly recommend going into a full course on ITIL 4.
+
+(innovative music)
+
+
+
+
+
+
+
+
+
+
+
+
+
+We've come a long way throughout this course,
+
+and in this lesson, I want to put it all together.
+
+We started out talking about our
+
+four dimensions of service management,
+
+which include organizations and people,
+
+information and technology,
+
+partners and suppliers,
+
+and the value stream and processes.
+
+Then, we talked about the ITIL service value system.
+
+This included our opportunity and demands as our input,
+
+and those are shaped by our service value chain,
+
+our governance, our practices, our guiding principles,
+
+and our continual improvement,
+
+and out the other side, we got value.
+
+Now, we also dug into the service value chain itself,
+
+as part of the service value system.
+
+We explored the different parts of it, like engage, plan,
+
+improve, design and transition, obtain and build,
+
+deliver and support, and our products and services.
+
+And then, we spent the last three sections of the course
+
+looking at the 34 different practices across ITIL 4.
+
+But now, it's time for us to put it all together.
+
+So let's walk through a real-world scenario
+
+with an incident that needs to be resolved,
+
+and see how everything we talked about so far
+
+will be integrated together to create the desired value.
+
+Now, let's pretend we work for a large logistics company,
+
+something like Walmart or Amazon, and we're part of
+
+their IT service management organization within the company.
+
+They have a warehouse that uses a wifi network
+
+in order to allow the forklift driver
+
+to receive instructions on his mobile device
+
+that tells him which aisle and which rack the product is
+
+that he needs to go pick up.
+
+Unfortunately, the wireless access point that supports
+
+the wifi in this area of the warehouse
+
+isn't working so well, and so the driver's mobile device
+
+can't get the information that he needs.
+
+Now, this has a significant impact on our business
+
+because whenever that forklift driver can't receive
+
+the instructions quickly enough, there's a risk
+
+that a tight business deadline might be missed.
+
+After all, some companies like Amazon
+
+rely on their super-fast shipping
+
+as a core function of their business model.
+
+Now, while this may seem like
+
+a relatively straightforward incident,
+
+it can't be resolved simply by following the steps
+
+of a predetermined incident management procedure.
+
+Instead, there's a lot of interconnections
+
+among the practices and the activities
+
+for this wireless network to get fixed
+
+and returned to normal operations.
+
+So let's get started with the service value system first.
+
+First, we're going to see that we have a demand,
+
+and in this case, the warehouse manager
+
+and the forklift driver discovered the wifi coverage
+
+isn't working properly in a certain portion
+
+of the warehouse.
+
+This means the forklift driver needs to drive
+
+back to the manager's office in between each pickup,
+
+so he can find out the location of his next product
+
+within the warehouse.
+
+This is causing delays,
+
+and that could cause delivery deadlines to be missed.
+
+This is an incident.
+
+From this demand, we now move to the engage activity,
+
+where the warehouse manager
+
+is going to call up the service desk.
+
+The service desk agent listens to the issue
+
+that's being described by the warehouse manager,
+
+they log it as an incident in the incident management system
+
+and they categorize that incident as a high priority.
+
+The agent then lets the warehouse manager know
+
+that they're going to escalate the issue to
+
+the technical support team that's responsible
+
+for that wireless network, and they provide him updates
+
+every two hours until that issue is fixed.
+
+Now, the service desk agent escalates the ticket
+
+for the wireless network
+
+up to the wireless network support team.
+
+These are the folks who have the delivery and support
+
+function in the value chain activity
+
+for this wireless network.
+
+This allows the service desk agent to provide
+
+the information to the network support engineer,
+
+and the diagnosis and analysis of the incident
+
+is going to begin by that engineer.
+
+Next, the network support engineer identifies that
+
+the wireless access point has failed,
+
+and she decides to replace it with a spare
+
+from the existing spare parts inventory.
+
+This action alone is going to involve several practices.
+
+First, we have the IT asset management practice,
+
+so that she can update the serial number
+
+in the configuration item database.
+
+Then, she goes through
+
+the service configuration management practice,
+
+because she needs to configure this device
+
+based on the approved baseline, and install it.
+
+She's also going to go through the change control practice,
+
+since she's going to install a new piece of equipment
+
+into the network, and of course,
+
+she's going to go through incident management,
+
+because she's working on resolving an incident.
+
+Let's assume that the replacement
+
+of this wireless access point is considered
+
+a standard change, so no additional approvals are needed.
+
+If it was a normal change, then we would have to go through
+
+and get approval through the change management process,
+
+or escalate that issue as an emergency change.
+
+Either way, all of this would occur
+
+within the change control practice, though, right?
+
+Finally, our network engineer replaces the access point,
+
+verifies that it's working,
+
+and she updates the incident management system.
+
+She then calls the service desk agent, and tells her
+
+that she believes the incident has been resolved.
+
+Now that the engineer has fixed the incident,
+
+she sits back and thinks about what happened,
+
+and she thinks about any possible ways that
+
+she could have fixed this more efficiently.
+
+If she thinks of any, she might add those to the continual
+
+improvement register as suggestions for future improvements.
+
+If she does this, this becomes part of
+
+continual improvement practice and the improve activity.
+
+Now, the service desk agent, on the other hand,
+
+goes back to the engage activity
+
+by contacting the warehouse manager,
+
+and she tells him that the wireless network
+
+should be working again.
+
+She asks the manager to verify that
+
+the forklift driver's mobile phone is working again,
+
+and gets the confirmation of this, and when she does,
+
+she can then close that incident fully.
+
+Now, when we look at the final block
+
+on the service value system, that's value.
+
+The value's being co-created by ensuring
+
+the wireless coverage is restored, and the forklift driver
+
+can now perform his job more efficiently once again,
+
+by using that mobile device to identify the location
+
+of the product that he needs to pick up and move.
+
+About an hour later, that warehouse manager might receive
+
+a brief email, asking for a user satisfaction survey.
+
+This might ask for his feedback on the incident
+
+and its resolution.
+
+This would become an engage activity again, right?
+
+Well, if he fills out the survey, we can then take that
+
+and based on the feedback received, we can identify
+
+trends and patterns based on satisfaction scores
+
+in the user's comments.
+
+This would fall under our improve area,
+
+and we're going to be determining if our incident management
+
+system and our processes are working effectively.
+
+So, that was a lot.
+
+As you can see, all of this ties together,
+
+and we enter and leave different activities
+
+and different practices all throughout this single incident
+
+and its single resolution.
+
+It isn't a simply linear process, but instead,
+
+we're bounced from engage to the deliver and support,
+
+back to engage, over to improve, and many other practices,
+
+several times during this quick example.
+
+Remember, identifying and understanding
+
+all of these interconnections is the key to establishing
+
+and promoting good service management.
+
+So when you're looking at one of your processes,
+
+or one of your workloads, you need to consider
+
+all of these things as you're laying it out,
+
+so you can make sure you're doing it
+
+the most efficient and effective way possible.Let's discuss a few details about the ITIL4
+
+Foundation Certification exam.
+
+If you're like most of my students you probably
+
+are taking this course because you eventually
+
+want to become ITIL4 Foundation Certified.
+
+Maybe you're working on the certification
+
+to advance in your current career,
+
+or maybe it's because you're trying to get
+
+your first job in the IT field.
+
+Either way this course was designed to give you
+
+a great introduction to the certification
+
+and determine if you want to join
+
+a full ITIL4 Foundation course
+
+so that you can pass the certification exam.
+
+In this section of the course I'm going to give you some
+
+information about the ITIL4 Foundation Certification Exam
+
+such as how many questions it is, how long it is, how those
+
+questions are designed, and how you can sign up
+
+to take the exam when you feel ready for it.
+
+The certification exam is time and you only get 60 minutes
+
+to take the exam.
+
+If you're taking exam in English and English
+
+isn't your native language of mother tongue,
+
+you do get an extra 15 minutes of time
+
+on the official certification exam,
+
+bringing your time up to 75 minutes if you request
+
+that time extension from PeopleCert scheduling your exam.
+
+For those less for native English speakers though,
+
+we only get 60 Minutes.
+
+Don't worry though, 60 Minutes is more than enough time
+
+for you to complete this exam.
+
+Most of my students finish the exam
+
+in about 30 minutes or so.
+
+Now your exam is going to contain 40 questions
+
+and the exam contains only multiple choice questions.
+
+It's really important to remember that this exam
+
+is all about recall and understanding,
+
+not about memorization.
+
+Therefore, you won't be asked to write out a definition
+
+word-for-word, or pull and answer out of thin air,
+
+instead you're always selecting an answer as A, B, C, or D.
+
+Now since the ITIL4 exam is focused on you having
+
+the ability to recall or understand the concepts
+
+from your studies,
+
+it is important to understand what the words
+
+recall and understand mean in terms
+
+of this certification exam.
+
+Basically, if the question is focused on your ability
+
+to recall something, this means you have to be able
+
+to identify a definition or a term
+
+from the answer choices provided.
+
+For example, if the exam provides you a definition
+
+for a particular term that we used in the course,
+
+it's going to give it to you word-for-word,
+
+the exact same way that we presented it, and then
+
+you're going to get four different terms and you have
+
+to choose the correct one from those.
+
+This is a good example of a question using the recall level
+
+of difficulty on the exam.
+
+On the exam nine of your 40 questions are considered
+
+to be recall level questions,
+
+for that reason it's really important to be familiar
+
+with the definitions and why we always call
+
+out the definitions during our lessons in both this course
+
+and our ITIL4 Foundation Certification Training Course.
+
+In that course all these definitions are also provided
+
+to you in a downloadable course study guide,
+
+as well as being displayed on the screen
+
+whenever I'm teaching them to you.
+
+Now if you get a question that's focused on your ability
+
+to understand something,
+
+this means you have to be able to describe
+
+or explain a definition, a term, or concept,
+
+based on the answers provided.
+
+For the certification exam, the remaining 31 out of the 40
+
+questions are going to be at this level.
+
+For these questions, the exam isn't looking for an exact
+
+word-for-word match,
+
+but instead you might be given something like
+
+an example of something and you have to determine
+
+the correct ITIL practice that would relate to it.
+
+if you pay attention to the material in our courses though,
+
+you're going to quickly learn all the concepts of ITIL4
+
+and you'll be able to answer these questions
+
+without too much difficulty on the exam.
+
+Now in order to pass the certification exam
+
+you have to answer at least 26 questions right
+
+out of the 40 questions.
+
+This equates to about a 65% higher on the exam
+
+in order for you to pass it and earn
+
+your ITIL4 Certification.
+
+To prepare for the exam I recommend taking
+
+a lot of practice exams.
+
+To give you a feel for the type of questions
+
+you're going to get on the exam,
+
+I'm going to include a few sample quizzes
+
+in this section of the course,
+
+with the different types of questions for you to attempt.
+
+This will give you an idea what the questions
+
+on the real exam are going to feel like.
+
+Whenever you're taking a practice exam,
+
+I always recommend aiming for 75% or higher
+
+for you to consider it a pass.
+
+This will give you a comfortable 10% buffer
+
+in case you a bad test day, or you get nervous
+
+when you're taking timed tests and certification exams.
+
+If you're consistently scoring 75% or higher
+
+on your practice exams,
+
+you should be ready for the real thing.
+
+Now if you decide to work towards the official certification
+
+and become ITIL4 Foundation certified,
+
+I highly recommend taking a lot of these practice exams.
+
+In my ITIL4 training courses for example,
+
+I always provide eight full-length practice exams
+
+as part of the training.
+
+This gives you over 320 unique practice questions
+
+to ensure that you're ready on test day no matter what
+
+question they give you.
+
+So this brings up the question of how you take
+
+the official certification exam and become
+
+ITIL4 Foundation certified.
+
+Well Axelos and PeopleCert make it really easy for you
+
+because you don't even have to get in your car and drive
+
+to a testing center like a lot of other certifications.
+
+Instead you're able to take the exam online
+
+from the comfort of your own home or office
+
+using the PeopleCert web proctoring service.
+
+To schedule your exam you do need an exam voucher though,
+
+which covers the cost of the certification exam.
+
+You can buy the exam voucher directly
+
+at PeopleCert on their website,
+
+and it cost about $350 to $400, depending on where you live
+
+because they use regional pricing.
+
+This exam voucher entitles you to take the exam only once,
+
+if you pass it, you're certified.
+
+If you feel it though, you have to buy a new voucher
+
+in order to take the exam again
+
+and this can get quite expensive.
+
+For that reason PeopleCert offers something called
+
+the Take2 option, which for an additional $89 or $99,
+
+when your booking your exam, you can get this option.
+
+I like to think of this as failed exam insurance,
+
+basically, if you pay the extra money
+
+to get this Take2 option and you fail the exam
+
+when you take it the first time,
+
+they're going to give you an exam retake and no extra cost
+
+within the next six months,
+
+but if you pass the exam the first time they keep
+
+that extra money and you're still certified.
+
+So if you pass the exam the first time up,
+
+which you really should if you're using
+
+a good training course,
+
+then you don't need to spend the extra money
+
+on a Tak2e option.
+
+But, if you're a bit scared of tests and you're thinking
+
+you might fail,
+
+then you might want to spend the extra money
+
+and get the Take2.
+
+Please note, you have to buy the Take2 option
+
+before you take your exam.
+
+It works like insurance, you can't buy insurance
+
+for your car after you've already wrecked your car.
+
+The same thing here, if you already took
+
+and failed the exam,
+
+then you have to buy a new voucher because they're not
+
+going to sell you this exam insurance, this Take2 option,
+
+after you've already failed.
+
+Now the question I always get from students
+
+is, "should I pay the extra money to buy the Take2 option?"
+
+and I'll tell you my answer is no,
+
+because I believe you should take the exam
+
+after you studied for it and you've been using
+
+a good training course.
+
+If you do that, you shouldn't need the Take2 option
+
+because you aren't going to fail.
+
+In fact, if you decide to join me
+
+in my ITIL training courses at diontraining.com,
+
+we provide you with everything you need to get certified,
+
+including the videos, the study guide, the quizzes,
+
+the practice exams, and even your exam voucher
+
+as part of our package.
+
+And because we believe strongly in our ability
+
+to get you certified,
+
+we actually will pay for your exam retake
+
+if you fail the exam after you took our course,
+
+making it completely unnecessary for you to get
+
+that Take2 option.
+
+That being said, you don't have to get your course from us.
+
+You can get it from any authorized training organization
+
+to prepare for the certification exam,
+
+but I do recommend you look at their retake policies
+
+and their voucher costs too.
+
+Some organization will have very little voucher cost,
+
+but very high training costs,
+
+or vice versa.
+
+Regardless of where you buy your training
+
+and your exam voucher,
+
+you do need to schedule your exam at PeopleCert's website
+
+and choose the day and time that's most convenient for you.
+
+PeopleCert offers the exam anytime of the day or night,
+
+both on weekdays and weekends,
+
+24 hours a day, seven days a week,
+
+to make it really convenient for you to get certified.
+
+So now you know what to study for the exam in terms
+
+of recalling understanding,
+
+you've purchased your training and your exam voucher,
+
+and you've scheduled your exam,
+
+so let's talk about the test questions themself.
+
+I already said you're going to get 40 questions
+
+on exam day and they're all going to be multiple choice,
+
+but you should also know that there are three different
+
+types of multiple choice questions that you're going to see.
+
+These are called classic, missing word,
+
+and list type questions.
+
+Let's take a look at some silly examples
+
+for each of these to really drive the point home.
+
+First we have our classic questions,
+
+for example, which character was created by Walt Disney,
+
+a, Bart Simpson, b, Mickey Mouse, c, Fred Flintstone,
+
+or d, Garfield?
+
+Well if you know cartoons, you probably know
+
+the right answer is B, Mickey Mouse.
+
+This is a classic type question.
+
+Now you may also see a few classic questions
+
+on the exam soon as what we call
+
+a negative classic question.
+
+This is symbolized by the word not in the question.
+
+So if I asked you which is not a car brand,
+
+a, Ford, b, Saturn, c, Cisco, or d, Toyota,
+
+you should hopefully realize that Cisco is not a car brand.
+
+In fact, Cisco is a brand of networking equipment,
+
+but the other three choices are all car brands,
+
+so Cisco's the right answer in this case
+
+because it is not a car brand.
+
+Now the next type of question we have is what's known
+
+as a missing word question.
+
+On the exam this is shown by a question mark
+
+that represents a single word or a short phrase
+
+of the two to four words.
+
+For example, a are and blank is a type of fruit.
+
+A, Apple, b, Carrot, c, Onion, or d, Celery.
+
+Well the answer is a, Apple,
+
+because b, c, and d, are all types of vegetables.
+
+This makes the sentence read as an apple is a type of fruit.
+
+Now the final type of question is known
+
+as a list type question.
+
+You're probably going to get one or two of these
+
+on your ITIL4 Certification Exam.
+
+These questions ask a question that have
+
+more than one correct answer,
+
+and they provide those in and numbered list.
+
+So you're then going to select the answer choice
+
+that represents the correct list items.
+
+For example, which ingredients are in a PB&J sandwich,
+
+one, Peanut butter, two, Apples, three, Bacon,
+
+or four, Grape jelly.
+
+Now as a parent who's made a lot of PB&J sandwiches
+
+in my life, I can tell you that it's one and four,
+
+peanut butter and jelly.
+
+So we have to find the letter choice the answers
+
+one and four, which is this case is d,
+
+and so that becomes our answer.
+
+So now that you know all about the exam,
+
+let's try some practice questions in this sections quizzes
+
+to see what some real questions might look like on the exam.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
